@@ -1,0 +1,46 @@
+# Welcome to Jekyll!
+
+# Este es tu archivo de configuración para ajustes que afectan a todo tu blog.
+
+title: Your awesome title
+email: your-email@example.com
+description: >-
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: '' # el subpath de tu sitio, e.g. /blog
+url: '' # la hostname base & protocolo para tu sitio, e.g. http://example.com
+twitter_username: jekyllrb
+github_username: jekyll
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Configuración de colecciones
+collections:
+  noticias:
+    output: true
+    permalink: /noticias/:path/
+  eventos:
+    output: true
+    permalink: /eventos/:path/
+
+# Incluye directorios y archivos específicos en el sitio compilado.
+# Esto es útil para carpetas como 'pdfs' que quieres que estén disponibles en tu sitio.
+include:
+  - pdfs
+
+# Excluir de procesamiento.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

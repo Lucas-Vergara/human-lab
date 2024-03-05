@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/noticias.css">
+</head>
+
+<body>
+  <article class="noticia">
+    <header class="noticia-header">
+      <h1>{{ page.title }}</h1>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d de %B de %Y" }}</time>
+    </header>
+    <section class="noticia-content">
+      {{ content }}
+    </section>
+  </article>
+  <script src="/assets/js/noticias.js"></script>
+</body>
+
+</html>
