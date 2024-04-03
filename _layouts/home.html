@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
 </head>
 
 <body>
   {% include header.html %}
 
-  <img src="/assets/images/Frame 15.png" alt="Descripción de la imagen" class="img-responsive">
+  <img src="{{ '/assets/images/Frame 15.png' | prepend: site.baseurl }}" alt="Descripción de la imagen"
+    class="img-responsive">
   <main>
     <div class="breadcrumbs" style="padding: 20px 0;">
       {% if page.breadcrumbs %}
@@ -53,7 +54,8 @@
           </p>
         </div>
         <div>
-          <img src="/assets/images/Frame 18.png" alt="Descripción de la imagen" class="img-responsive">
+          <img src="{{'/assets/images/Frame 18.png' | prepend: site.baseurl }}" alt="Descripción de la imagen"
+            class="img-responsive">
         </div>
       </div>
     </div>
@@ -75,7 +77,7 @@
       <!-- Cartas de Areas de investigacion -->
       <div style="display: flex; gap: 20px;">
         <div class="research-area-card">
-          <img src="/assets/images/early-childhood.svg" alt="SVG">
+          <img src="{{'/assets/images/early-childhood.svg' | prepend: site.baseurl }}" alt="SVG">
           <br>
           <div style="
           font-size: 32px;
