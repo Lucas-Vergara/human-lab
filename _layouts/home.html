@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  {% include header.html %}
+
+  <img src="/assets/images/Frame 15.png" alt="Descripción de la imagen" class="img-responsive">
+  <main>
+    <div class="breadcrumbs" style="padding: 20px 0;">
+      {% if page.breadcrumbs %}
+      <ul style="list-style: none; padding: 0;">
+        {% for crumb in page.breadcrumbs %}
+        <li>
+          <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+          {% unless forloop.last %} &gt; {% endunless %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <!-- El resto de tu contenido de <main> aquí -->
+    </div>
+    <div class="content" style="background-color: #D9D9D94D; padding: 40px;">
+      <div style="display: flex; gap: 100px; justify-content: space-between;">
+        <div style=" width: 50%;">
+          <h2>
+            Human Capital Lab,
+            <span style="color: #E00F18;">
+              UANDES
+            </span>
+          </h2>
+
+          <p>
+            El Centro de Estudio de Capital Humano de la Universidad de los Andes (UANDES) se dedica a la investigación
+            y
+            comprensión de los aspectos fundamentales que influyen en el desarrollo y el potencial humano en el entorno
+            laboral y académico.
+          </p>
+          <p>
+            Nuestro objetivo es explorar y analizar los diversos factores que impactan en el capital humano, desde la
+            formación educativa hasta la capacitación laboral, con el fin de fomentar un ambiente donde cada individuo
+            pueda
+            alcanzar su máximo rendimiento y contribuir de manera significativa al progreso de la sociedad. A través de
+            investigaciones innovadoras y colaborativas, buscamos impulsar prácticas y políticas que promuevan el
+            crecimiento
+            y el bienestar de las personas en todos los aspectos de sus vidas profesionales y personales.
+          </p>
+        </div>
+        <div>
+          <img src="/assets/images/Frame 18.png" alt="Descripción de la imagen" class="img-responsive">
+        </div>
+      </div>
+    </div>
+    <!-- <h1>Bienvenido a {{ site.title }}</h1>
+    <p>{{ site.description }}</p> -->
+
+    <br>
+    <br>
+    <br>
+    <!-- Seccion Áreas de Investigación -->
+    <div class="content">
+      <div class="center-title">
+        Líneas de investigación
+      </div>
+      <br>
+      <br>
+      <br>
+
+      <!-- Cartas de Areas de investigacion -->
+      <div style="display: flex; gap: 20px;">
+        <div class="research-area-card">
+          <img src="/assets/images/early-childhood.svg" alt="SVG">
+          <br>
+          <div style="
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 39.07px;
+          color: #E00F18;
+          ">
+            Early Childhood
+          </div>
+          <div style="
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 26px;
+          padding: 20px 0px;
+          ">
+            Bajada explicativa de esta línea de investigación de los lineas de extensión.
+          </div>
+          <a href="/early-childhood"
+            style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px;">
+            Ver más
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="research-area-card">
+          <img src="/assets/images/education.svg" alt="SVG">
+          <br>
+          <div style="
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 39.07px;
+          color: #E00F18;
+          ">
+            Education
+          </div>
+          <div style="
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 26px;
+          padding: 20px 0px;
+          ">
+            Bajada explicativa de esta línea de investigación de los lineas de extensión.
+          </div>
+          <a href="/early-childhood"
+            style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px;">
+            Ver más
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="research-area-card">
+          <img src="/assets/images/health.svg" alt="SVG">
+          <br>
+          <div style="
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 39.07px;
+          color: #E00F18;
+          ">
+            Health
+          </div>
+          <div style="
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 26px;
+          padding: 20px 0px;
+          ">
+            Bajada explicativa de esta línea de investigación de los lineas de extensión.
+          </div>
+          <a href="/early-childhood"
+            style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px;">
+            Ver más
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="research-area-card">
+          <img src="/assets/images/crime.svg" alt="SVG">
+          <br>
+          <div style="
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 39.07px;
+          color: #E00F18;
+          ">
+            Crime
+          </div>
+          <div style="
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 26px;
+          padding: 20px 0px;
+          ">
+            Bajada explicativa de esta línea de investigación de los lineas de extensión.
+          </div>
+          <a href="/early-childhood"
+            style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px;">
+            Ver más
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Seccion Noticias -->
+    <div style="background-color:#F4F4F4;">
+      <br>
+      <div class="content">
+        <div style="display: flex; justify-content: space-between;">
+          <div style="
+          font-size: 38px;
+          font-weight: 700;
+          line-height: 46.4px;
+          ">
+            Noticias
+          </div>
+
+          <a href="/noticias"
+            style="display: flex; align-items: center; color: #E00F18; font-size: 20px; font-weight: 700; line-height: 24.42px;">
+            Ver más noticias
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
+            </svg>
+          </a>
+        </div>
+        <ul style="display: flex; gap: 10px;">
+          {% for noticia in site.noticias limit:5 %}
+          <li class="noticia-card" style="display: flex; flex-direction: column;">
+            {% if noticia.image %}
+            <img src="{{ noticia.image }}" alt="{{ noticia.title }}" style="width: 100%; height: auto;">
+            {% endif %}
+            <div style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
+              <div style="
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 26px;
+                ">
+                {{noticia.title}}
+              </div>
+              <a href="{{ noticia.url }}" style="color: #E00F18; align-self: flex-end;">
+                {{ noticia.date | date: "%-d de %B de %Y" }}
+              </a>
+            </div>
+          </li>
+
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+
+
+  </main>
+
+  {% include footer.html %}
+  <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

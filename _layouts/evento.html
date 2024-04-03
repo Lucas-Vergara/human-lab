@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - Eventos</title>
+  <link rel="stylesheet" href="/assets/css/eventos.css">
+</head>
+
+<body>
+  <article class="evento">
+    <header class="evento-header">
+      <h1>{{ page.title }}</h1>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d de %B de %Y" }}</time>
+    </header>
+    <section class="evento-location">
+      <h2>Ubicación</h2>
+      <p>{{ page.location }}</p> <!-- Asegúrate de añadir 'location' en el front matter de tus eventos -->
+    </section>
+    <section class="evento-content">
+      {{ content }}
+    </section>
+    <section class="evento-registration">
+      {% if page.registration_link %}
+      <h2>Registro</h2>
+      <p>Regístrate para el evento <a href="{{ page.registration_link }}">aquí</a>.</p>
+      {% endif %}
+    </section>
+  </article>
+  <script src="/assets/js/eventos.js"></script>
+</body>
+
+</html>

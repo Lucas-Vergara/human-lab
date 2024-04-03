@@ -1,8 +1,25 @@
 ---
-layout: post
+layout: noticia
 title: 'Mi Primer Evento'
 date: 2023-03-10
 categories: eventos
 ---
 
-Detalles de tu evento aquí. Incluye lugar, hora y cualquier otra información relevante.
+¡Estás cordialmente invitado a nuestro primer evento!
+
+**¿Dónde?**  
+Lugar del Evento, Dirección, Ciudad, País
+
+**¿Cuándo?**  
+Fecha: 10 de Marzo de 2023  
+Hora: 18:00 - 21:00
+
+**Detalles:**  
+Únete a nosotros para un emocionante evento donde [detalles sobre lo que sucederá durante el evento].
+
+Habrá [comida/bebida/actividades], y es una gran oportunidad para [networking/conocer más sobre un tema específico/disfrutar].
+
+**Entrada:**  
+[Gratuita/precio de la entrada] - Por favor confirma tu asistencia en [email/enlace de registro].
+
+¡Esperamos verte allí!

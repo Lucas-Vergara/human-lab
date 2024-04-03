@@ -1,0 +1,173 @@
+html {
+  height: 100%; /* Asegúrate de que el elemento raíz (html) también ocupe el 100% de la altura */
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; /* Establece una fuente genérica para todo el documento */
+}
+
+body {
+  display: flex; /* Activa Flexbox */
+  flex-direction: column; /* Alinea los hijos verticalmente */
+  min-height: 100vh; /* Min-height al 100% del viewport height */
+  margin: 0; /* Restablece cualquier margen por defecto */
+}
+
+.center-title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46.4px;
+  text-align: center; /* Centra el texto horizontalmente */
+  width: 100%; /* Ocupa el ancho completo de su contenedor */
+  margin: auto;
+}
+
+.research-area-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos hijos horizontalmente */
+  text-align: center; /* Centra el texto dentro de los elementos hijos */
+  padding: 32px 10px;
+  background: #E00F181A;
+}
+
+.noticia-card {
+  width: 375px;
+  background: #FFFFFF;
+  height: 450px;
+}
+
+.content {
+  margin: 20px 50px; /* Espaciado arriba y abajo para el contenido principal */
+}
+
+.content-wrapper {
+  flex: 1; /* Esto hará que el contenedor del contenido crezca para ocupar el espacio disponible, empujando el footer hacia abajo */
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos Generales del Header */
+.site-header {
+  background-color: #E00F18;
+  color: #fff;
+}
+
+.containerheader {
+  margin: auto 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header a {
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.site-header a:not(.logo):hover {
+  border-bottom: 5px solid #FFFFFF;
+  padding-bottom: 8px;
+}
+
+/* Navegación */
+.main-navigation {
+  margin-top: 30px;
+  padding: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.main-navigation li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.main-navigation a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-navigation a:hover {
+  text-decoration: underline;
+}
+
+/* Contenido Principal */
+.content h1 {
+  color: #333;
+  font-size: 2em;
+}
+
+.content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Lista de Posts */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+li small {
+  display: block;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #E00F18;
+  color: #FFFFFF;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px; /* Ajusta el espacio entre columnas según necesites */
+}
+
+.columna ul {
+  padding-left: 20px; /* Ajusta el padding para alinear el texto de la lista si es necesario */
+}
+
+.columna ul li {
+  list-style-type: disc; /* Estilo de punteo para los ítems de la lista, disc es el valor por defecto */
+}
+
+.columna ul li a {
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.columna div {
+  font-family: Helvetica;
+font-size: 20px;
+font-weight: 700;
+line-height: 29.3px;
+text-align: left;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
