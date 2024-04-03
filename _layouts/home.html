@@ -70,15 +70,18 @@
       <br>
       <br>
       <!-- Cartas de Areas de investigacion -->
+      {% assign research_links = "/early-childhood /education /health /crime" | split: " " %}
+      {% assign research_titles = "Early Childhood,Education,Health,Crime" | split: "," %}
+
       <div style="display: flex; gap: 20px;">
-        <!-- Ajuste en los enlaces para que usen 'site.baseurl' -->
-        {% assign research_links = "/early-childhood /education /health /crime" | split: " " %}
         {% for link in research_links %}
+        {% assign index = forloop.index0 %}
+        {% assign title = research_titles[index] %}
         <div class="research-area-card">
           <img src="{{ '/assets/images/' | append: link | append: '.svg' | prepend: site.baseurl }}" alt="SVG">
           <br>
           <div style="font-size: 32px; font-weight: 700; line-height: 39.07px; color: #E00F18;">
-            {{ link | capitalize }}
+            {{ title }}
           </div>
           <div style="font-size: 18px; font-weight: 400; line-height: 26px; padding: 20px 0px;">
             Bajada explicativa de esta línea de investigación de los lineas de extensión.
