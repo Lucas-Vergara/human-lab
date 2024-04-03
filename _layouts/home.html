@@ -19,7 +19,7 @@
       <ul style="list-style: none; padding: 0;">
         {% for crumb in page.breadcrumbs %}
         <li>
-          <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+          <a href="{{ crumb.url | prepend: site.baseurl }}">{{ crumb.title }}</a>
           {% unless forloop.last %} &gt; {% endunless %}
         </li>
         {% endfor %}
@@ -36,7 +36,6 @@
               UANDES
             </span>
           </h2>
-
           <p>
             El Centro de Estudio de Capital Humano de la Universidad de los Andes (UANDES) se dedica a la investigación
             y
@@ -54,14 +53,11 @@
           </p>
         </div>
         <div>
-          <img src="{{'/assets/images/Frame 18.png' | prepend: site.baseurl }}" alt="Descripción de la imagen"
+          <img src="{{ '/assets/images/Frame 18.png' | prepend: site.baseurl }}" alt="Descripción de la imagen"
             class="img-responsive">
         </div>
       </div>
     </div>
-    <!-- <h1>Bienvenido a {{ site.title }}</h1>
-    <p>{{ site.description }}</p> -->
-
     <br>
     <br>
     <br>
@@ -73,29 +69,21 @@
       <br>
       <br>
       <br>
-
       <!-- Cartas de Areas de investigacion -->
       <div style="display: flex; gap: 20px;">
+        <!-- Ajuste en los enlaces para que usen 'site.baseurl' -->
+        {% assign research_links = "/early-childhood /education /health /crime" | split: " " %}
+        {% for link in research_links %}
         <div class="research-area-card">
-          <img src="{{'/assets/images/early-childhood.svg' | prepend: site.baseurl }}" alt="SVG">
+          <img src="{{ '/assets/images/' | append: link | append: '.svg' | prepend: site.baseurl }}" alt="SVG">
           <br>
-          <div style="
-          font-size: 32px;
-          font-weight: 700;
-          line-height: 39.07px;
-          color: #E00F18;
-          ">
-            Early Childhood
+          <div style="font-size: 32px; font-weight: 700; line-height: 39.07px; color: #E00F18;">
+            {{ link | capitalize }}
           </div>
-          <div style="
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 26px;
-          padding: 20px 0px;
-          ">
+          <div style="font-size: 18px; font-weight: 400; line-height: 26px; padding: 20px 0px;">
             Bajada explicativa de esta línea de investigación de los lineas de extensión.
           </div>
-          <a href="/early-childhood"
+          <a href="{{ link | prepend: site.baseurl }}"
             style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px;">
             Ver más
             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -103,90 +91,7 @@
             </svg>
           </a>
         </div>
-
-        <div class="research-area-card">
-          <img src="/assets/images/education.svg" alt="SVG">
-          <br>
-          <div style="
-          font-size: 32px;
-          font-weight: 700;
-          line-height: 39.07px;
-          color: #E00F18;
-          ">
-            Education
-          </div>
-          <div style="
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 26px;
-          padding: 20px 0px;
-          ">
-            Bajada explicativa de esta línea de investigación de los lineas de extensión.
-          </div>
-          <a href="/early-childhood"
-            style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px;">
-            Ver más
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
-            </svg>
-          </a>
-        </div>
-
-        <div class="research-area-card">
-          <img src="/assets/images/health.svg" alt="SVG">
-          <br>
-          <div style="
-          font-size: 32px;
-          font-weight: 700;
-          line-height: 39.07px;
-          color: #E00F18;
-          ">
-            Health
-          </div>
-          <div style="
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 26px;
-          padding: 20px 0px;
-          ">
-            Bajada explicativa de esta línea de investigación de los lineas de extensión.
-          </div>
-          <a href="/early-childhood"
-            style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px;">
-            Ver más
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
-            </svg>
-          </a>
-        </div>
-
-        <div class="research-area-card">
-          <img src="/assets/images/crime.svg" alt="SVG">
-          <br>
-          <div style="
-          font-size: 32px;
-          font-weight: 700;
-          line-height: 39.07px;
-          color: #E00F18;
-          ">
-            Crime
-          </div>
-          <div style="
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 26px;
-          padding: 20px 0px;
-          ">
-            Bajada explicativa de esta línea de investigación de los lineas de extensión.
-          </div>
-          <a href="/early-childhood"
-            style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px;">
-            Ver más
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
-            </svg>
-          </a>
-        </div>
+        {% endfor %}
       </div>
     </div>
     <br>
@@ -195,15 +100,10 @@
       <br>
       <div class="content">
         <div style="display: flex; justify-content: space-between;">
-          <div style="
-          font-size: 38px;
-          font-weight: 700;
-          line-height: 46.4px;
-          ">
+          <div style="font-size: 38px; font-weight: 700; line-height: 46.4px;">
             Noticias
           </div>
-
-          <a href="/noticias"
+          <a href="{{ '/noticias' | prepend: site.baseurl }}"
             style="display: flex; align-items: center; color: #E00F18; font-size: 20px; font-weight: 700; line-height: 24.42px;">
             Ver más noticias
             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -215,33 +115,27 @@
           {% for noticia in site.noticias limit:5 %}
           <li class="noticia-card" style="display: flex; flex-direction: column;">
             {% if noticia.image %}
-            <img src="{{ noticia.image }}" alt="{{ noticia.title }}" style="width: 100%; height: auto;">
+            <img src="{{ noticia.image | prepend: site.baseurl }}" alt="{{ noticia.title }}"
+              style="width: 100%; height: auto;">
             {% endif %}
             <div style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
-              <div style="
-                font-size: 18px;
-                font-weight: 700;
-                line-height: 26px;
-                ">
-                {{noticia.title}}
+              <div style="font-size: 18px; font-weight: 700; line-height: 26px;">
+                {{ noticia.title }}
               </div>
-              <a href="{{ noticia.url }}" style="color: #E00F18; align-self: flex-end;">
+              <a href="{{ noticia.url | prepend: site.baseurl }}" style="color: #E00F18; align-self: flex-end;">
                 {{ noticia.date | date: "%-d de %B de %Y" }}
               </a>
             </div>
           </li>
-
           {% endfor %}
         </ul>
       </div>
-
     </div>
-
 
   </main>
 
   {% include footer.html %}
-  <script src="/assets/js/script.js"></script>
+  <script src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
 </body>
 
 </html>
