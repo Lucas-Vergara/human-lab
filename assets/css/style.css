@@ -65,8 +65,8 @@ body {
   text-decoration: none !important;
 }
 
-.site-header a:not(.logo):hover {
-  border-bottom: 5px solid #FFFFFF;
+.site-header a:not(.logo):not(.external):hover {
+  border-bottom: 3px solid #FFFFFF;
   padding-bottom: 8px;
 }
 
@@ -88,7 +88,7 @@ body {
   text-decoration: none;
 }
 
-.main-navigation a:hover {
+.main-navigation a:hover  {
   text-decoration: underline;
 }
 
