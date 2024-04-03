@@ -6,8 +6,8 @@ description: >-
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: 'human-lab'
-url: https://lucas-vergara.github.io/human-lab/
+baseurl: '/human-lab' # Asegúrate de que haya una barra al principio, pero no al final.
+url: 'https://lucas-vergara.github.io' # La URL debe ser hasta tu usuario de GitHub, sin el repositorio.
 twitter_username: jekyllrb
 github_username: jekyll
 
