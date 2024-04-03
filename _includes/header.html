@@ -1,6 +1,6 @@
 <div class="site-header">
   <div class="containerheader">
-    <a href="/" class="logo">
+    <a href="{{'/' | prepend: site.baseurl}}" class="logo">
       <div id="header-logo" style="
       box-shadow: 0px 4px 60px 0px #00000059;
       background: #E00F18;
@@ -43,12 +43,12 @@
         Visita UANDES
       </div>
       <ul>
-        <li><a href="/about">Sobre nosotros</a></li>
-        <li><a href="/investigacion">Líneas de investigación</a></li>
-        <li><a href="/noticias">Noticias</a></li>
-        <li><a href="/eventos/">Eventos</a></li>
-        <li><a href="/repositorio">Repositorio</a></li>
-        <li><a href="/contacto">Contacto</a></li>
+        <li><a href="{{'/about' | prepend: site.baseurl}}">Sobre nosotros</a></li>
+        <li><a href="{{'/investigacion' | prepend: site.baseurl}}">Líneas de investigación</a></li>
+        <li><a href="{{'/noticias' | prepend: site.baseurl}}">Noticias</a></li>
+        <li><a href="{{'/eventos' | prepend: site.baseurl}}/">Eventos</a></li>
+        <li><a href="{{'/repositorio' | prepend: site.baseurl}}">Repositorio</a></li>
+        <li><a href="{{'/contacto' | prepend: site.baseurl}}">Contacto</a></li>
       </ul>
     </nav>
   </div>
