@@ -29,7 +29,7 @@
     </div>
     <div class="content" style="background-color: #D9D9D94D; padding: 40px;">
       <div style="display: flex; gap: 100px; justify-content: space-between;">
-        <div style=" width: 50%;">
+        <div>
           <h2>
             Human Capital Lab,
             <span style="color: #E00F18;">
@@ -114,7 +114,7 @@
             </svg>
           </a>
         </div>
-        <ul style="display: flex; gap: 10px;">
+        <ul style="display: flex; gap: 10px;" class="noticia-list">
           {% for noticia in site.noticias limit:5 %}
           <li class="noticia-card" style="display: flex; flex-direction: column;">
             {% if noticia.image %}

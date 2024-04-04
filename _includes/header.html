@@ -1,3 +1,6 @@
+<script src="{{'/assets/js/header.js' | prepend: site.baseurl }}"></script>
+<link rel="stylesheet" href="{{ '/assets/css/header.css' | prepend: site.baseurl }}">
+
 <div class="site-header">
   <div class="containerheader">
     <a href="{{'/' | prepend: site.baseurl}}" class="logo">
@@ -54,5 +57,25 @@
         <li><a href="{{'/contacto' | prepend: site.baseurl}}">Contacto</a></li>
       </ul>
     </nav>
+  </div>
+</div>
+
+<div class="site-header-mobile">
+  <div class="container-header-mobile">
+    <a href="{{'/' | prepend: site.baseurl}}" class="logo">
+      <img src="{{'/assets/images/logo_uandes_macro 1.svg' | prepend: site.baseurl }}"
+        alt="Logo Universidad de los Andes" style="height: 80px;">
+    </a>
+    <button class="hamburger-icon" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <ul class="mobile-nav" style="border-top: 1px solid white; padding-top: 10px;">
+      <li><a href="{{'/about' | prepend: site.baseurl}}">Sobre nosotros</a></li>
+      <li><a href="{{'/investigacion' | prepend: site.baseurl}}">Líneas de investigación</a></li>
+      <li><a href="{{'/noticias' | prepend: site.baseurl}}">Noticias</a></li>
+      <li><a href="{{'/eventos' | prepend: site.baseurl}}/">Eventos</a></li>
+      <li><a href="{{'/repositorio' | prepend: site.baseurl}}">Repositorio</a></li>
+      <li><a href="{{'/contacto' | prepend: site.baseurl}}">Contacto</a></li>
+    </ul>
   </div>
 </div>

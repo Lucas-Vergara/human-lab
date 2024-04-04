@@ -1,0 +1,55 @@
+
+/* Estilos del botón hamburguesa */
+.hamburger-icon {
+  background: none;
+  border: none;
+  color: white; /* Color del icono */
+  font-size: 24px; /* Tamaño del icono */
+  cursor: pointer;
+}
+
+/* Estilos del menú desplegable */
+.mobile-nav {
+  width: 100%; /* Asegura que el menú ocupe todo el ancho */
+  display: none; /* Inicialmente oculto */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #E00F18; /* Fondo rojo para coincidir con el tema del sitio */
+  position: absolute; /* Hace que el menú se posicione absolutamente respecto a su contenedor más cercano con posición no estática */
+  top: 100%; /* Coloca el menú justo debajo del contenedor del botón hamburguesa */
+  left: 0;
+  z-index: 1000; /* Asegura que el menú se muestre sobre otros elementos */
+}
+
+.mobile-nav li a {
+  color: white;
+  padding-top: 10px;
+  padding-left: 20px;
+  text-decoration: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    display: none;
+  }
+
+  .container-header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E00F18; /* Fondo rojo para coincidir con el tema del sitio */
+    padding: 5px 20px; /* Ajuste de padding para asegurar consistencia en el diseño */
+  }
+
+  .site-header-mobile {
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Importante para el posicionamiento absoluto del .mobile-nav */
+  }
+
+  .mobile-nav {
+    display: none; /* Asegura que el menú esté oculto por defecto */
+  }
+}
