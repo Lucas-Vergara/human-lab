@@ -1,8 +1,13 @@
 ---
-layout: default
+layout: page
 title: Eventos
 permalink: /eventos/
 extra_css: assets/css/eventos.css
+breadcrumbs:
+  - title: Inicio
+    url: '/'
+  - title: Eventos
+    url: '/eventos/'
 ---
 
 # Eventos

@@ -35,7 +35,10 @@
 
   .research-area-card, .noticia-card {
     flex-direction: column;
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 70%; /* Ocupa todo el ancho disponible */
   }
 
+  footer {
+    flex-direction: column;
+  }
 }

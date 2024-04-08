@@ -29,7 +29,6 @@ body {
 }
 
 .container {
-  margin: 0 auto;
   padding: 20px;
 }
 
@@ -69,6 +68,11 @@ body {
 .img-responsive {
   max-width: 100%;
   height: auto;
+}
+
+.breadcrumbs {
+  margin-top: 0px;
+  color: white;
 }
 
 @media (max-width: 768px) {
