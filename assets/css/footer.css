@@ -1,0 +1,79 @@
+/* Footer */
+footer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 150px;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #E00F18;
+  color: #FFFFFF;
+}
+
+.events {
+  padding: 30px 50px 30px 50px;
+  background: #EDEDED;
+  display: flex;
+  justify-content: space-between;
+}
+
+.events-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29.3px;
+  text-align: left;
+}
+
+.events-box {
+  margin-top: -8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.42px;
+  text-align: left;
+  padding: 10px 20px 6px 20px;
+  background: #FFFFFF;
+  color: #E00F18;
+  border: 2px solid #E00F18
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+}
+
+.columna ul {
+  padding-left: 20px; /* Ajusta el padding para alinear el texto de la lista si es necesario */
+}
+
+.columna ul li {
+  list-style-type: disc; /* Estilo de punteo para los ítems de la lista, disc es el valor por defecto */
+  margin-bottom: 5px;
+}
+
+.columna ul li a {
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.columna ul li a:hover {
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.columna div {
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29.3px;
+  text-align: left;
+}
+
+.escribenos {
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 8px 2px 5px 20px;
+  font-size: 15px !important;
+  font-weight: 700;
+  line-height: 24.42px;
+  width: 110px;
+  margin-top: 10px;
+}

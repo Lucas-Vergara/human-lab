@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | prepend: site.baseurl }}">
 </head>
 
 <body>
   {% include header.html %}
 
-  <img src="{{ '/assets/images/Frame 15.png' | prepend: site.baseurl }}" alt="Descripción de la imagen"
-    class="img-responsive">
-  <main>
+  <img src="{{ '/assets/images/Frame 15.png' | prepend: site.baseurl }}" alt="Banner Principal" class="img-responsive">
+  <main class="content-wrapper">
     <div class="breadcrumbs" style="padding: 20px 0;">
       {% if page.breadcrumbs %}
       <ul style="list-style: none; padding: 0;">
@@ -29,7 +29,7 @@
     </div>
     <div class="content" style="background-color: #D9D9D94D; padding: 40px;">
       <div style="display: flex; gap: 100px; justify-content: space-between;">
-        <div>
+        <div class="hcl-resumen">
           <h2>
             Human Capital Lab,
             <span style="color: #E00F18;">
@@ -53,8 +53,7 @@
           </p>
         </div>
         <div>
-          <img src="{{ '/assets/images/Frame 18.png' | prepend: site.baseurl }}" alt="Descripción de la imagen"
-            class="img-responsive">
+          <img src="{{ '/assets/images/Frame 18.png' | prepend: site.baseurl }}" alt="Foto HCL" class="img-responsive">
         </div>
       </div>
     </div>
@@ -114,9 +113,11 @@
             </svg>
           </a>
         </div>
-        <ul style="display: flex; gap: 10px;" class="noticia-list">
+        <ul class="noticia-list">
+          {% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" |
+          split: "," %}
           {% for noticia in site.noticias limit:5 %}
-          <li class="noticia-card" style="display: flex; flex-direction: column;">
+          <li class="noticia-card">
             {% if noticia.image %}
             <img src="{{ noticia.image | prepend: site.baseurl }}" alt="{{ noticia.title }}"
               style="width: 100%; height: auto;">
@@ -126,15 +127,17 @@
                 {{ noticia.title }}
               </div>
               <a href="{{ noticia.url | prepend: site.baseurl }}" style="color: #E00F18; align-self: flex-end;">
-                {{ noticia.date | date: "%-d de %B de %Y" }}
+                {% assign mes = noticia.date | date: "%-m" | minus: 1 %}
+                {{ noticia.date | date: "%-d de" }} {{ meses[mes] }} de {{ noticia.date | date: "%Y" }}
               </a>
             </div>
           </li>
           {% endfor %}
+
         </ul>
       </div>
+      <br>
     </div>
-
   </main>
 
   {% include footer.html %}

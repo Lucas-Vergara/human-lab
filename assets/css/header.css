@@ -8,6 +8,34 @@
   cursor: pointer;
 }
 
+/* Estilos Generales del Header */
+.site-header {
+  background-color: #E00F18;
+  color: #fff;
+}
+
+.containerheader {
+  margin: auto 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header a {
+  color: #fff;
+  text-decoration: none !important;
+}
+
+/* Oculta el header móvil por defecto */
+.site-header-mobile {
+  display: none;
+}
+
+.site-header a:not(.logo):not(.external):hover {
+  border-bottom: 3px solid #FFFFFF;
+  padding-bottom: 8px;
+}
+
 /* Estilos del menú desplegable */
 .mobile-nav {
   width: 100%; /* Asegura que el menú ocupe todo el ancho */
