@@ -27,9 +27,16 @@
   border: 2px solid #E1E1E1;
 }
 
+.img-50 {
+  width: 50%;
+}
 
 @media (max-width: 768px) {
   .hcl-resumen {
+    width: 100%;
+  }
+
+  .img-50 {
     width: 100%;
   }
 

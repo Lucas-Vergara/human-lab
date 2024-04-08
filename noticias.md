@@ -14,6 +14,7 @@ breadcrumbs:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/assets/css/noticias.css' | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ '/assets/css/home.css' | prepend: site.baseurl }}">
 </head>
 {% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
@@ -30,7 +31,7 @@ breadcrumbs:
     <li class="noticia-card">
       {% if noticia.image %}
       <img src="{{ noticia.image | prepend: site.baseurl }}" alt="{{ noticia.title }}"
-        style="width: 100%; height: auto;">
+        class="noticia-img">
       {% endif %}
       <div style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
         <div style="font-size: 18px; font-weight: 700; line-height: 26px;">

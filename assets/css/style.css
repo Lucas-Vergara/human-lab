@@ -11,7 +11,7 @@ body {
 }
 
 .center-title {
-  font-size: 38px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 46.4px;
   text-align: center; /* Centra el texto horizontalmente */
@@ -74,6 +74,123 @@ body {
   margin-top: 0px;
   color: white;
 }
+
+.noticia-img {
+  width: 100%; 
+  height: 220px;
+  object-fit: cover;
+}
+
+.four-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre las cartas */
+  justify-content: space-around; /* Esto distribuye el espacio de manera uniforme */
+}
+
+.four-card {
+  flex-basis: calc(50% - 80px); /* Asume un gap de 20px, ajusta según necesites */
+  background: #F4F4F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px; /* Añadido padding aquí */
+}
+
+.contenedor-foto {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-foto img {
+  max-height: 300px; /* Limita la altura máxima de la imagen */
+  width: auto; /* Mantiene la proporción de la imagen */
+}
+
+.contenedor-texto {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column; /* Organiza los hijos en columna */
+  justify-content: start; /* Alinea los elementos al inicio */
+  align-items: start; /* Alinea los elementos al inicio, cambia según necesites */
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.titulo, .subtitulo, .biografia {
+  margin-bottom: 10px; /* Añade espacio entre los elementos */
+}
+
+/* Puedes añadir estilos específicos para titulo, subtitulo y biografia si lo deseas */
+.titulo {
+  font-size: 1.5em;
+}
+
+.subtitulo {
+  font-size: 1.2em;
+  color: darkgrey;
+}
+
+.biografia {
+  font-size: 1em;
+}
+
+.contenedor-inferior {
+  display: flex;
+  max-height: 300px;
+  overflow: hidden; /* Oculta cualquier contenido que exceda el contenedor */
+}
+
+.mitad {
+  flex: 1; /* Hace que cada mitad ocupe el 50% del contenedor */
+}
+
+.texto {
+  padding-right: 50px;
+  padding-left: 50px;
+  background: #E00F181A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fila1 {
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.fila1 {
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.texto .fila {
+  margin: 10px 0; /* Espaciado entre filas */
+}
+
+.texto .fila.boton {
+  align-self: flex-start; /* Alinea esta fila específica hacia la izquierda */
+  background-color: white; /* Fondo blanco */
+  color: #E00F18; /* Texto rojo */
+  border: 2px solid #E00F18; /* Borde rojo */
+  padding: 5px 10px; /* Ajusta al tamaño deseado */
+}
+
+.texto a {
+  font-weight: 700;
+  text-decoration: none !important;
+  color: red; /* Asegura que los enlaces dentro de las filas que no son .boton también sean rojos */
+}
+
+.foto img {
+  width: 100%; /* Hace que la imagen llene la mitad del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio disponible sin perder sus proporciones */
+}
+
 
 @media (max-width: 768px) {
   .breadcrumbs ul, .content {
