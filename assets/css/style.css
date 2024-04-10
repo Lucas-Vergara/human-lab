@@ -70,6 +70,23 @@ body {
   height: auto;
 }
 
+.contenedor-imagen {
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ajusta esto según necesites */
+}
+
+.img-cropeada {
+  width: auto; /* Mantiene la proporción de la imagen */
+  height: 100%; /* Asegura que la imagen cubra la altura del contenedor */
+  min-width: 100%; /* Asegura que la imagen siempre sea al menos tan ancha como el contenedor */
+  object-fit: cover;
+  object-position: center center; /* Centra el recorte */
+}
+
 .breadcrumbs {
   margin-top: 0px;
   color: white;
@@ -143,6 +160,10 @@ body {
   overflow: hidden; /* Oculta cualquier contenido que exceda el contenedor */
 }
 
+.hidden {
+  display: none !important;
+}
+
 .mitad {
   flex: 1; /* Hace que cada mitad ocupe el 50% del contenedor */
 }
@@ -191,6 +212,10 @@ body {
   object-fit: cover; /* Asegura que la imagen cubra el espacio disponible sin perder sus proporciones */
 }
 
+.share a {
+  text-decoration: none;
+  margin-right: 20px;
+}
 
 @media (max-width: 768px) {
   .breadcrumbs ul, .content {

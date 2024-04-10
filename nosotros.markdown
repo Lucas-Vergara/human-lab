@@ -89,7 +89,7 @@ breadcrumbs:
         <div class="fila boton">
           <a href="{{'/contacto' | prepend: site.baseurl}}">
             Ir a contacto 
-            <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -7px; margin-right: -8px">
+            <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -7px; margin-right: -8px; margin-left: -5px">
               <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
             </svg>
           </a>

@@ -15,18 +15,49 @@ layout: default
 <body>
   {% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split:
   "," %}
-  <article class="noticia">
-    <header class="noticia-header">
-      <h1>{{ page.title }}</h1>
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {% assign mes = page.date | date: "%-m" | minus: 1 %}
-        {{ page.date | date: "%-d de" }} {{ meses[mes] }} de {{ page.date | date: "%Y" }}
-      </time>
-    </header>
-    <section class="noticia-content">
-      {{ content }}
-    </section>
-  </article>
+  <br>
+  <time datetime="{{ page.date | date_to_xmlschema }}"
+    style="color: #E00F18; border-bottom: 1px solid #E00F18; font-weight: 700;">
+    {% assign mes = page.date | date: "%-m" | minus: 1 %}
+    {{ page.date | date: "%-d de" }} {{ meses[mes] }} de {{ page.date | date: "%Y" }}
+  </time>
+  <h1>{{ page.title }}</h1>
+  {% if page.image %}
+  <div class="contenedor-imagen">
+    <img src="{{ page.image | prepend: site.baseurl }}" alt="Banner Principal" class="img-cropeada">
+  </div>
+  {% endif %}
+  <section class="noticia-content">
+    {{ content }}
+    <br>
+    <hr>
+    <h3>
+      ¡Comparte esta noticia a través de tus redes sociales!
+    </h3>
+    <div class="share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.baseurl }}"
+        class="share-button facebook" target="_blank">
+        <img src="{{'/assets/images/facebook.svg' | prepend: site.baseurl }}" alt="Facebook">
+      </a>
+      <a href="https://twitter.com/intent/tweet?url={{ page.url | prepend: site.baseurl }}&text={{ page.title }}"
+        class="share-button twitter" target="_blank">
+        <img src="{{'/assets/images/twitter.svg' | prepend: site.baseurl }}" alt="Twitter">
+      </a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://lucas-vergara.github.io{{ page.url | prepend: site.baseurl }}"
+        class="share-button linkedin" target="_blank">
+        <img src="{{'/assets/images/linkedin.svg' | prepend: site.baseurl }}" alt="LinkedIn">
+      </a>
+    </div>
+    <br>
+    <br>
+    <a href="{{ '/noticias' | prepend: site.baseurl }}"
+      style="display: flex; align-items: right; color: #E00F18; font-size: 20px; font-weight: 700; line-height: 24.42px;">
+      Ver más noticias
+      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
+      </svg>
+    </a>
+  </section>
   <script src="{{'/assets/js/noticias.js' | prepend: site.baseurl }}"></script>
 </body>
 

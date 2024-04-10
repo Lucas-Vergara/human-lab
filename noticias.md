@@ -23,12 +23,12 @@ breadcrumbs:
 
   <div style="display: flex; justify-content: space-between;">
   </div>
-  <ul class="noticia-list">
     {% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" |
     split: "," %}
     {% assign noticias_ordenadas = site.noticias | sort: 'date' | reverse %}
-    {% for noticia in noticias_ordenadas limit:5 %}
-    <li class="noticia-card">
+  <ul class="noticia-list">
+    {% for noticia in noticias_ordenadas %}
+    <li class="noticia-card{% if forloop.index > 4 %} hidden{% endif %}">
       {% if noticia.image %}
       <img src="{{ noticia.image | prepend: site.baseurl }}" alt="{{ noticia.title }}"
         class="noticia-img">
@@ -44,5 +44,16 @@ breadcrumbs:
       </div>
     </li>
     {% endfor %}
-
   </ul>
+  {% if noticias_ordenadas.size > 4 %}
+  <div class="center-title" style="font-size: 18px;">
+    <span style="color: #E00F18; border-bottom: 2px solid #E00F18; cursor: pointer">
+    Cargar más noticias
+    </span>
+    <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -7px; margin-right: -8px; margin-left: -5px">
+      <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
+    </svg>
+  </div>
+  {% endif %}
+
+  <script src="{{'/assets/js/noticias.js' | prepend: site.baseurl }}"></script>
