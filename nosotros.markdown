@@ -26,7 +26,7 @@ breadcrumbs:
         </p>
       </div>
       <div class="img-50">
-        <img src="{{ '/assets/images/nosotros.jpg' | prepend: site.baseurl }}" alt="Foto HCL" class="img-responsive">
+        <img src="{{ '/assets/images/nosotros.jpg' | prepend: site.baseurl }}" alt="Foto HCL" class="img-responsive" style="max-height: 500px">
       </div>
     </div>
     <br>

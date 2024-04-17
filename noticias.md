@@ -21,11 +21,10 @@ breadcrumbs:
 
 # Noticias más recientes
 
-  <div style="display: flex; justify-content: space-between;">
-  </div>
     {% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" |
     split: "," %}
     {% assign noticias_ordenadas = site.noticias | sort: 'date' | reverse %}
+
   <ul class="noticia-list">
     {% for noticia in noticias_ordenadas %}
     <li class="noticia-card{% if forloop.index > 4 %} hidden{% endif %}">

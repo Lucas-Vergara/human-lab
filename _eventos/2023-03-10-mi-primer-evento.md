@@ -1,7 +1,7 @@
 ---
 layout: noticia
 title: 'Mi Primer Evento'
-date: 2023-03-10
+date: 2024-03-10
 categories: eventos
 ---
 
@@ -11,7 +11,7 @@ categories: eventos
 Lugar del Evento, Dirección, Ciudad, País
 
 **¿Cuándo?**  
-Fecha: 10 de Marzo de 2023  
+Fecha: 10 de Marzo de 2024  
 Hora: 18:00 - 21:00
 
 **Detalles:**  

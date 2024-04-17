@@ -1,7 +1,7 @@
 ---
 layout: noticia
 title: 'Inicio de convenio de colaboración entre Universidad de los Andes y Asociación Chilena de Municipalidades'
-date: 2023-03-08
+date: 2024-03-08
 image: '/assets/images/Frame 18.png'
 categories: noticias
 breadcrumbs:
@@ -10,7 +10,7 @@ breadcrumbs:
   - title: Noticias
     url: '/noticias/'
   - title: mi-quinta-noticia
-    url: '/noticias/2023-03-08-mi-quinta-noticia'
+    url: '/noticias/2024-03-08-mi-quinta-noticia'
 ---
 
 ¡Bienvenido a nuestra primera gran noticia! Estamos emocionados de compartir algunos _puntos destacados_ de nuestro reciente proyecto.

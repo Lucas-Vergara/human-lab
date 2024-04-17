@@ -8,14 +8,12 @@
   <link rel="stylesheet" href="{{'/assets/css/style.css' | prepend: site.baseurl}}">
   <link rel="stylesheet" href="{{'/assets/css/home.css' | prepend: site.baseurl}}">
   <link rel="stylesheet" href="{{'/assets/css/page.css' | prepend: site.baseurl}}">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://www.uandes.cl/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://www.uandes.cl/favicon-16x16.png">
 </head>
 
 <body>
   {% include header.html %}
 
-  <div>
+  <div class="content-wrapper">
     <div class="img">
       <div class="content" style="padding-top: 25px; margin-top: 0px;">
         <div class="breadcrumbs">
@@ -46,8 +44,9 @@
     <div class="content container content-wrapper">
       {{ content }}
     </div>
+  </div>
 
-    {% include footer.html %}
+  {% include footer.html %}
 </body>
 
 </html>
