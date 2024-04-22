@@ -16,19 +16,33 @@ layout: default
   {% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split:
   "," %}
   <br>
-  <time datetime="{{ page.date | date_to_xmlschema }}"
-    style="color: #E00F18; border-bottom: 1px solid #E00F18; font-weight: 700;">
-    {% assign mes = page.date | date: "%-m" | minus: 1 %}
-    {{ page.date | date: "%-d de" }} {{ meses[mes] }} de {{ page.date | date: "%Y" }}
-  </time>
-  <h1>{{ page.title }}</h1>
-  {% if page.image %}
-  <div class="contenedor-imagen">
-    <img src="{{ page.image | prepend: site.baseurl }}" alt="Banner Principal" class="img-cropeada">
-  </div>
-  {% endif %}
   <section class="noticia-content">
+    <time datetime="{{ page.date | date_to_xmlschema }}"
+      style="color: #E00F18; border-bottom: 1px solid #E00F18; font-weight: 700;">
+      {% assign mes = page.date | date: "%-m" | minus: 1 %}
+      {{ page.date | date: "%-d de" }} {{ meses[mes] }} de {{ page.date | date: "%Y" }}
+    </time>
+    <h1>{{ page.title }}</h1>
+    {% if page.image %}
+    <div class="contenedor-imagen">
+      <img src="{{ page.image | prepend: site.baseurl }}" alt="Banner Principal" class="img-cropeada">
+    </div>
+    {% endif %}
     {{ content }}
+    <br>
+    {% if page.video %}
+    <!-- Contenedor del Video de YouTube -->
+    <div class="video-container" style="padding-top: 32% !important">
+      <iframe width="560" height="315" src="{{ page.video }}" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    {% endif %}
+    {% if page.images %}
+    <div class="image-grid">
+      <!-- Las imágenes se cargarán aquí por JavaScript -->
+    </div>
+    {% endif %}
     <br>
     <hr>
     <h3>
@@ -59,6 +73,46 @@ layout: default
     </a>
   </section>
   <script src="{{'/assets/js/noticias.js' | prepend: site.baseurl }}"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const basePath = "{{ site.baseurl }}"; // Base URL del sitio
+      const imagesPath = basePath + "/assets/images/" + "{{ page.images }}" + "/"; // Ruta de las imágenes para esta página
+      const gridContainer = document.querySelector('.image-grid');
+
+      fetch(imagesPath)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+          }
+          return response.text();
+        })
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const images = doc.querySelectorAll('a');
+          images.forEach(img => {
+            const imgPath = img.getAttribute('href');
+            if (imgPath.match(/\.(jpg|jpeg|png|gif)$/)) {
+              // Crear el elemento <a> y configurarlo para abrir en nueva pestaña
+              const linkElement = document.createElement('a');
+              linkElement.href = imagesPath + imgPath; // Establece el href al archivo de imagen
+              linkElement.target = '_blank'; // Asegura que se abra en una nueva pestaña
+              linkElement.rel = 'noopener noreferrer'; // Mejora la seguridad y el rendimiento
+
+              // Crear el elemento <img> y añadirlo al <a>
+              const imgElement = document.createElement('img');
+              imgElement.src = imagesPath + imgPath;
+              linkElement.appendChild(imgElement);
+
+              // Añadir el <a> completo al contenedor de la cuadrícula
+              gridContainer.appendChild(linkElement);
+            }
+          });
+        })
+        .catch(err => console.error('Error loading the images: ', err));
+    });
+
+  </script>
 </body>
 
 </html>

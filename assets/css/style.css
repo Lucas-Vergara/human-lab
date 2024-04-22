@@ -50,7 +50,7 @@ body {
   text-decoration: none;
 }
 
-.main-navigation a:hover  {
+.main-navigation a:hover {
   text-decoration: underline;
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 .contenedor-imagen {
-  max-height: 400px;
+  max-height: 350px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -93,7 +93,7 @@ body {
 }
 
 .noticia-img {
-  width: 100%; 
+  width: 100%;
   height: 220px;
   object-fit: cover;
 }
@@ -106,8 +106,10 @@ body {
 }
 
 .four-card {
-  flex-basis: calc(50% - 80px); /* Asume un gap de 20px, ajusta según necesites */
-  background: #F4F4F4;
+  flex-basis: calc(
+    50% - 80px
+  ); /* Asume un gap de 20px, ajusta según necesites */
+  background: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +138,9 @@ body {
   margin-left: 20px;
 }
 
-.titulo, .subtitulo, .biografia {
+.titulo,
+.subtitulo,
+.biografia {
   margin-bottom: 10px; /* Añade espacio entre los elementos */
 }
 
@@ -171,7 +175,7 @@ body {
 .texto {
   padding-right: 50px;
   padding-left: 50px;
-  background: #E00F181A;
+  background: #e00f181a;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -195,8 +199,8 @@ body {
 .texto .fila.boton {
   align-self: flex-start; /* Alinea esta fila específica hacia la izquierda */
   background-color: white; /* Fondo blanco */
-  color: #E00F18; /* Texto rojo */
-  border: 2px solid #E00F18; /* Borde rojo */
+  color: #e00f18; /* Texto rojo */
+  border: 2px solid #e00f18; /* Borde rojo */
   padding: 5px 10px; /* Ajusta al tamaño deseado */
 }
 
@@ -217,8 +221,49 @@ body {
   margin-right: 20px;
 }
 
+.div-limitada {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* Número de líneas después de las cuales se mostrarán puntos suspensivos */
+  overflow: hidden; /* Esconde cualquier contenido que se desborde de la cantidad de líneas establecida */
+  text-overflow: ellipsis; /* Añade puntos suspensivos al final del texto visible */
+  line-height: 1.2; /* Ajusta la altura de línea según necesites */
+  height: calc(
+    1.2em * 4
+  ); /* Ajusta la altura máxima de la div basado en el line-height y el número de líneas */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Ajusta el tamaño de las celdas según necesites */
+  gap: 10px; /* Espacio entre las imágenes */
+  margin-top: 20px;
+}
+
+.image-grid img {
+  width: 100%; /* Hace que las imágenes ocupen toda la celda */
+  height: auto; /* Mantiene la relación de aspecto de las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio asignado sin distorsionarse */
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 @media (max-width: 768px) {
-  .breadcrumbs ul, .content {
+  .breadcrumbs ul,
+  .content {
     padding: 10px;
   }
 
@@ -226,25 +271,27 @@ body {
     margin: 0px; /* Ajusta el margen para el contenido principal */
   }
 
-  .research-area-card, .noticia-card {
+  .research-area-card,
+  .noticia-card {
     flex-direction: column;
   }
 
-  .content div, .content ul {
+  .content div,
+  .content ul {
     display: block;
   }
 
-  div[style*="display: flex;"] {
+  div[style*='display: flex;'] {
     flex-direction: column;
     gap: 20px;
   }
 
-  .research-area-card, .noticia-card {
+  .research-area-card,
+  .noticia-card {
     width: 100%; /* Ocupa todo el ancho disponible */
   }
 
   .breadcrumbs {
     padding: 10px;
   }
-
 }

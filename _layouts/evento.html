@@ -7,31 +7,131 @@ layout: default
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} - Eventos</title>
+  <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{'/assets/css/eventos.css' | prepend: site.baseurl}}">
+  <link rel="stylesheet" href="{{'/assets/css/style.css' | prepend: site.baseurl}}">
 </head>
 
 <body>
-  <article class="evento">
-    <header class="evento-header">
-      <h1>{{ page.title }}</h1>
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d de %B de %Y" }}</time>
-    </header>
-    <section class="evento-location">
-      <h2>Ubicación</h2>
-      <p>{{ page.location }}</p> <!-- Asegúrate de añadir 'location' en el front matter de tus eventos -->
-    </section>
-    <section class="evento-content">
-      {{ content }}
-    </section>
-    <section class="evento-registration">
-      {% if page.registration_link %}
-      <h2>Registro</h2>
-      <p>Regístrate para el evento <a href="{{ page.registration_link }}">aquí</a>.</p>
-      {% endif %}
-    </section>
-  </article>
-  <script src="{{/assets/js/eventos.js}} | prepend: site.baseurl"></script>
+  <div class="content" style="color: rgba(0, 0, 0, 0.76);">
+    <div class="grid-container">
+      <!-- Columna izquierda para la tarjeta del evento -->
+      <aside class="left-column">
+        <div class="event-card">
+          <h3>Detalles del evento</h3>
+          <div style="display: flex; flex-direction: row;">
+            <img src="{{'/assets/images/bxs_calendar.svg' | prepend: site.baseurl }}" alt="calendar"
+              style="height: 20px; color: #E00F18;">
+            <div style="padding-top: 2px; padding-left: 5px;">
+              {{ page.schedule-dates }}
+            </div>
+          </div>
+          <br>
+          <div style="display: flex; flex-direction: row;">
+            <img src="{{'/assets/images/time.svg' | prepend: site.baseurl }}" alt="calendar"
+              style="height: 20px; color: #E00F18;">
+            <div style="padding-top: 2px; padding-left: 5px;">
+              {{ page.schedule-time }}
+            </div>
+          </div>
+          <br>
+          <div style="display: flex; flex-direction: row;">
+            <img src="{{'/assets/images/location.svg' | prepend: site.baseurl }}" alt="calendar"
+              style="height: 20px; color: #E00F18;">
+            <div style="padding-top: 2px; padding-left: 5px;">
+              {{ page.location }}
+            </div>
+          </div>
+          <p>{{ page.summary }}</p>
+          <button class="subscribe-button">Subscribirse al Evento</button>
+          <br>
+          <br>
+          <!-- <a href="{{'/eventos' | prepend: site.baseurl}}" style="text-decoration: none; font-size: 14px;"
+            class="events-box">
+            Recibir un recordatorio del evento
+          </a> -->
+        </div>
+      </aside>
+
+      <!-- Columna derecha para la descripción detallada del evento -->
+      <section class="right-column">
+        {{ content }}
+        {% if page.video %}
+        <!-- Contenedor del Video de YouTube -->
+        <div class="video-container">
+          <iframe width="560" height="315" src="{{ page.video }}" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        {% endif %}
+        {% if page.images %}
+        <div class="image-grid">
+          <!-- Las imágenes se cargarán aquí por JavaScript -->
+        </div>
+        {% endif %}
+        <br>
+        <hr>
+        <h3>
+          ¡Comparte este evento a través de tus redes sociales!
+        </h3>
+        <div class="share">
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.baseurl }}"
+            class="share-button facebook" target="_blank">
+            <img src="{{'/assets/images/facebook.svg' | prepend: site.baseurl }}" alt="Facebook">
+          </a>
+          <a href="https://twitter.com/intent/tweet?url={{ page.url | prepend: site.baseurl }}&text={{ page.title }}"
+            class="share-button twitter" target="_blank">
+            <img src="{{'/assets/images/twitter.svg' | prepend: site.baseurl }}" alt="Twitter">
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://lucas-vergara.github.io{{ page.url | prepend: site.baseurl }}"
+            class="share-button linkedin" target="_blank">
+            <img src="{{'/assets/images/linkedin.svg' | prepend: site.baseurl }}" alt="LinkedIn">
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="{{'/assets/js/noticias.js' | prepend: site.baseurl }}"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const basePath = "{{ site.baseurl }}"; // Base URL del sitio
+      const imagesPath = basePath + "/assets/images/" + "{{ page.images }}" + "/"; // Ruta de las imágenes para esta página
+      const gridContainer = document.querySelector('.image-grid');
+
+      fetch(imagesPath)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+          }
+          return response.text();
+        })
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const images = doc.querySelectorAll('a');
+          images.forEach(img => {
+            const imgPath = img.getAttribute('href');
+            if (imgPath.match(/\.(jpg|jpeg|png|gif)$/)) {
+              // Crear el elemento <a> y configurarlo para abrir en nueva pestaña
+              const linkElement = document.createElement('a');
+              linkElement.href = imagesPath + imgPath; // Establece el href al archivo de imagen
+              linkElement.target = '_blank'; // Asegura que se abra en una nueva pestaña
+              linkElement.rel = 'noopener noreferrer'; // Mejora la seguridad y el rendimiento
+
+              // Crear el elemento <img> y añadirlo al <a>
+              const imgElement = document.createElement('img');
+              imgElement.src = imagesPath + imgPath;
+              linkElement.appendChild(imgElement);
+
+              // Añadir el <a> completo al contenedor de la cuadrícula
+              gridContainer.appendChild(linkElement);
+            }
+          });
+        })
+        .catch(err => console.error('Error loading the images: ', err));
+    });
+  </script>
 </body>
+
 
 </html>

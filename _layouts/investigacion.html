@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{'/assets/css/style.css' | prepend: site.baseurl}}">
+  <link rel="stylesheet" href="{{'/assets/css/home.css' | prepend: site.baseurl}}">
+  <link rel="stylesheet" href="{{'/assets/css/page.css' | prepend: site.baseurl}}">
+</head>
+
+<body>
+  {% include header.html %}
+
+  <div class="content-wrapper">
+    <div class="img">
+      <div class="content" style="padding-top: 25px; margin-top: 0px;">
+        <div class="breadcrumbs">
+          <div style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center;">
+
+            {% if page.breadcrumbs %}
+            <img src="{{'/assets/images/home.svg' | prepend: site.baseurl }}" alt="home"
+              style="margin-right: -45px; height: 20px; margin-top: -4px; padding-right: 2px;">
+            <div>
+              <ul>
+                {% for crumb in page.breadcrumbs %}
+                <li style="display: inline-block;">
+                  <a href="{{ crumb.url | prepend: site.baseurl }}"
+                    style="text-decoration: none; color: white; margin-left: 5px;">{{
+                    crumb.title }}</a>
+                  {% unless forloop.last %} / {% endunless %}
+                </li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </div>
+          </div>
+
+        </div>
+        <div class="banner-title">{{ page.title }}</div>
+      </div>
+    </div>
+    <div class="content container content-wrapper">
+      {{ content }}
+      <div class="contenedor-inferior">
+        <div class="mitad texto">
+          <div class="fila fila1">¿Te interesa ser parte del <span style="color: #E00F18">Human Capital Lab?</span>
+          </div>
+          <div class="fila fila2">
+            Escríbenos a través de nuestro formulario de contacto y descubre como puedes aportar en nuestro Centro de
+            Esrtudios
+          </div>
+          <div class="fila boton">
+            <a href="{{'/contacto' | prepend: site.baseurl}}">
+              Ir a contacto
+              <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+                style="margin-bottom: -7px; margin-right: -8px; margin-left: -5px">
+                <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="mitad foto">
+          <img src="{{ '/assets/images/nosotros-bot.jpg' | prepend: site.baseurl }}" alt="persona"
+            class="img-responsive">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include footer.html %}
+</body>
+
+</html>

@@ -18,16 +18,13 @@ breadcrumbs:
   <link rel="stylesheet" href="{{ '/assets/css/home.css' | prepend: site.baseurl }}">
 </head>
 {% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
+{% assign noticias_ordenadas = site.noticias | sort: 'date' | reverse %}
 
 # Noticias más recientes
 
-    {% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" |
-    split: "," %}
-    {% assign noticias_ordenadas = site.noticias | sort: 'date' | reverse %}
-
   <ul class="noticia-list">
     {% for noticia in noticias_ordenadas %}
-    <li class="noticia-card{% if forloop.index > 4 %} hidden{% endif %}">
+    <li class="noticia-card{% if forloop.index > 4 %} hidden{% endif %}" style="cursor: pointer">
       {% if noticia.image %}
       <img src="{{ noticia.image | prepend: site.baseurl }}" alt="{{ noticia.title }}"
         class="noticia-img">

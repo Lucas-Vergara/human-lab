@@ -14,7 +14,8 @@
 <body>
   {% include header.html %}
 
-  <img src="{{ '/assets/images/Frame 15.png' | prepend: site.baseurl }}" alt="Banner Principal" class="img-responsive">
+  <img src="{{ '/assets/images/banner.png' | prepend: site.baseurl }}" alt="Banner Principal" class="img-responsive">
+
   <main class="content-wrapper">
     <div class="breadcrumbs" style="padding: 20px 0;">
       {% if page.breadcrumbs %}
@@ -84,7 +85,7 @@
             {{ title }}
           </div>
           <div style="font-size: 18px; font-weight: 400; line-height: 26px; padding: 20px 0px;">
-            Bajada explicativa de esta línea de investigación de los lineas de extensión.
+            Bajada explicativa de esta línea de investigación.
           </div>
           <a href="{{ link | prepend: site.baseurl }}"
             style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px; padding-left: 20px;">
