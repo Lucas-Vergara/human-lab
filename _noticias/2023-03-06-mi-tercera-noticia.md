@@ -1,6 +1,6 @@
 ---
 layout: noticia
-title: 'Inicio de convenio de colaboración entre Universidad de los Andes y Asociación Chilena de Municipalidades'
+title: 'Reforma para la Agilización de Proyectos de Inversión Introducida por el Gobierno'
 date: 2024-03-06
 image: '/assets/images/noticia2.jpg'
 categories: noticias
@@ -13,28 +13,22 @@ breadcrumbs:
     url: '/noticias/2024-03-06-mi-tercera-noticia'
 ---
 
-¡Bienvenido a nuestra primera gran noticia! Estamos emocionados de compartir algunos _puntos destacados_ de nuestro reciente proyecto.
+Con el propósito de agilizar la ejecución de proyectos de inversión, el gobierno ha introducido una reforma que implica la instauración del Servicio para la Regulación y Evaluación Sectorial. Además, se ha modificado el proceso de entrega y los plazos asociados a los permisos requeridos para llevar a cabo proyectos y actividades en este ámbito, a excepción de los ambientales, que permitirá mayor precisión a la hora de trabajar.
 
-## Lo que Hemos Logrado
+Angela Prado, directora del Diplomado en Permisología de Proyectos Inmobiliarios del Centro de Estudios Territoriales de la Universidad de los Andes, explica en detalle esta iniciativa y qué es lo que faltaría para poder seguir avanzando correctamente en este tema.
 
-Nuestro equipo ha estado trabajando duro en las siguientes áreas:
+Las medidas propuestas fueron:
 
-- **Desarrollo de Producto:** Lanzamiento de nuestra nueva aplicación móvil.
-- **Colaboraciones:** Establecimiento de asociaciones estratégicas con [Nombre de la Empresa](URL-de-la-empresa).
-- **Eventos Comunitarios:** Organización de un exitoso taller en línea sobre tecnología.
+Reforma integral a la tramitación de permisos sectoriales: Creación de una agencia pública que colabore en monitorear plazos y trámites. Además de crear la ventanilla única SUPER, la cual se trata de una plataforma de digitalización con 160 permisos críticos. Es decir, pasan 100 permisos a simples declaraciones.
 
-### Una Mirada más Profunda
+Reforma ambiental: Proyecto que moderniza la Ley 19.300 de Bases del Medio Ambiente, fortaleciendo el perfil técnico del SEA y eliminando el Comité de Ministros y las Comisiones de Evaluación Ambiental.
 
-Aquí hay un vistazo exclusivo de lo que hemos estado haciendo:
+Para que tenga efectos, la reforma debe ser integral y sistémica entre los diferentes cuerpos normativos, de manera que reduzca significativamente los tiempos de tramitación y contribuya a la modernización y desarrollo productivo del país, para lo cual es necesario complementar esta iniciativa con otros tres cambios legales:
 
-Este proyecto no solo representa un hito para nosotros sino que también marca el comienzo de una nueva era en cómo abordamos el desarrollo de productos y la interacción comunitaria.
+Monumentos Nacionales
 
-#### Cómo Puedes Participar
+Concesiones Marítimas: (ambas identificadas como más burocráticas e ineficientes por la Comisión Nacional de Evaluación y Productividad).
 
-Estamos buscando voluntarios y colaboradores para nuestro próximo proyecto. Si estás interesado, no dudes en [contactarnos](URL-de-contacto).
+Agilización de Permisos de Edificación en las Direcciones de Obras e implementar el DOM en línea.
 
-### Sobre Nosotros
-
-Somos una startup dedicada a [breve descripción de lo que hace la empresa]. Si quieres saber más sobre nuestra misión y nuestros proyectos, visita nuestra [página de nosotros](URL-de-nosotros).
-
-Gracias por leer, ¡esperamos tener noticias tuyas pronto!
+La implementación exitosa se presenta como clave para reducir los tiempos de tramitación y fomentar el desarrollo productivo del país.
