@@ -41,9 +41,11 @@ breadcrumbs:
     <h1>
     Enfocado en el desarrollo infantil
     </h1>
+    <!-- Párrafo principal -->
     <p>
     La línea de investigación sobre Early Childhood se centra en comprender y abordar los aspectos fundamentales del desarrollo infantil temprano, reconociendo su impacto crucial en la formación de individuos resilientes y competentes en el futuro. 
     </p>
+    <!-- Segundo párrafo -->
     <p>
     A través de una amplia gama de estudios interdisciplinarios, nuestros investigadores exploran cómo los entornos familiares, educativos y sociales influyen en el bienestar y el desarrollo de los niños desde la primera infancia hasta la edad preescolar. Investigamos temas clave como el apego temprano, la estimulación cognitiva, el desarrollo del lenguaje y la socialización, con el objetivo de informar políticas y prácticas que promuevan entornos de crianza y educación que favorezcan un desarrollo óptimo en los niños pequeños.
     </p>
@@ -87,4 +89,46 @@ breadcrumbs:
     </ul>
   </div>
 </div>
+<div class="four-cards content">
+      <div class="four-card">
+        <div class="contenedor-foto">
+          <img src="{{ '/assets/images/persona1.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
+        </div>
+        <div class="contenedor-texto">
+          <div class="titulo">Nombre</div>
+          <div class="subtitulo">Puesto de Trabajo</div>
+          <div class="biografia">Aquí va un párrafo con una mini biografía o descripción.</div>
+        </div>
+      </div>
+      <div class="four-card">
+        <div class="contenedor-foto">
+          <img src="{{ '/assets/images/persona2.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
+        </div>
+        <div class="contenedor-texto">
+          <div class="titulo">Nombre</div>
+          <div class="subtitulo">Puesto de Trabajo</div>
+          <div class="biografia">Aquí va un párrafo con una mini biografía o descripción.</div>
+        </div>
+      </div>
+      <div class="four-card">
+        <div class="contenedor-foto">
+          <img src="{{ '/assets/images/persona3.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
+        </div>
+        <div class="contenedor-texto">
+          <div class="titulo">Nombre</div>
+          <div class="subtitulo">Puesto de Trabajo</div>
+          <div class="biografia">Aquí va un párrafo con una mini biografía o descripción.</div>
+        </div>
+      </div>
+      <div class="four-card">
+        <div class="contenedor-foto">
+          <img src="{{ '/assets/images/persona1.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
+        </div>
+        <div class="contenedor-texto">
+          <div class="titulo">Nombre</div>
+          <div class="subtitulo">Puesto de Trabajo</div>
+          <div class="biografia">Aquí va un párrafo con una mini biografía o descripción.</div>
+        </div>
+      </div>
+    </div>
 </body>

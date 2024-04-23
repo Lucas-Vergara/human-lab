@@ -124,7 +124,7 @@ body {
 }
 
 .contenedor-foto img {
-  max-height: 300px; /* Limita la altura máxima de la imagen */
+  max-height: 150px; /* Limita la altura máxima de la imagen */
   width: auto; /* Mantiene la proporción de la imagen */
 }
 

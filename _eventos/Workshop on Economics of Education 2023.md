@@ -1,6 +1,7 @@
 ---
 layout: evento
 title: 'Workshop on Economics of Education 2023'
+subscription: '/asdasd'
 subtitle: 'Taller'
 date: 2023-08-15
 banner-image: 'evento-valle.jpg'

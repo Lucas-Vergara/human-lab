@@ -51,10 +51,11 @@ breadcrumbs:
         <div class="evento-texto">
           <div style="display: flex; flex-direction: row;">
             <div class="date-box">
-              <span style="font-size: 0.9em !important; margin-bottom: -20px; text-align: right;">{{ evento.date | date: "%b" | upcase }}</span>
+              <span style="font-size: 0.9em !important; margin-bottom: -20px; text-align: left;">{{ evento.date | date: "%b" | upcase }}</span>
               <br>
+              <span style="text-align: left;">
               {{ evento.date | date: "%d" }}
-              <br>
+              </span>
               {{ evento.date | date: "%Y" }}
             </div>
             <div style="padding-left: 15px; margin-top: -15px">

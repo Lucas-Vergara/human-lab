@@ -18,7 +18,7 @@ breadcrumbs:
 
 Nos complace anunciar el inicio de un convenio de colaboración entre la Universidad de los Andes y la Asociación Chilena de Municipalidades, que tiene como objetivo fortalecer la gestión municipal a través de la educación y el intercambio de conocimientos.
 
-## Objetivos del Convenio
+### Objetivos del Convenio
 
 Este convenio busca alcanzar los siguientes objetivos:
 

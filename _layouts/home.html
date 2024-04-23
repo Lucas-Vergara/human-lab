@@ -29,78 +29,8 @@
       </ul>
       {% endif %}
     </div>
-    <div class="content" style="background-color: #D9D9D94D; padding: 40px;">
-      <div style="display: flex; gap: 100px; justify-content: space-between;">
-        <div class="hcl-resumen">
-          <h2>
-            Human Capital Lab,
-            <span style="color: #E00F18;">
-              UANDES
-            </span>
-          </h2>
-          <p>
-            El Centro de Estudio de Capital Humano de la Universidad de los Andes (UANDES) se dedica a la investigación
-            y
-            comprensión de los aspectos fundamentales que influyen en el desarrollo y el potencial humano en el entorno
-            laboral y académico.
-          </p>
-          <p>
-            Nuestro objetivo es explorar y analizar los diversos factores que impactan en el capital humano, desde la
-            formación educativa hasta la capacitación laboral, con el fin de fomentar un ambiente donde cada individuo
-            pueda
-            alcanzar su máximo rendimiento y contribuir de manera significativa al progreso de la sociedad. A través de
-            investigaciones innovadoras y colaborativas, buscamos impulsar prácticas y políticas que promuevan el
-            crecimiento
-            y el bienestar de las personas en todos los aspectos de sus vidas profesionales y personales.
-          </p>
-        </div>
-        <div>
-          <img src="{{ '/assets/images/Frame 18.png' | prepend: site.baseurl }}" alt="Foto HCL" class="img-responsive">
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <!-- Seccion Áreas de Investigación -->
-    <div class="content">
-      <div class="center-title">
-        Líneas de investigación
-      </div>
-      <br>
-      <br>
-      <br>
-      <!-- Cartas de Areas de investigacion -->
-      {% assign research_links = "/early-childhood /education /health /crime" | split: " " %}
-      {% assign research_titles = "Early Childhood,Education,Health,Crime" | split: "," %}
-
-      <div style="display: flex; gap: 20px;">
-        {% for link in research_links %}
-        {% assign index = forloop.index0 %}
-        {% assign title = research_titles[index] %}
-        <div class="research-area-card">
-          <img src="{{ '/assets/images/' | append: link | append: '.svg' | prepend: site.baseurl }}" alt="SVG">
-          <br>
-          <div style="font-size: 32px; font-weight: 700; line-height: 39.07px; color: #E00F18;">
-            {{ title }}
-          </div>
-          <div style="font-size: 18px; font-weight: 400; line-height: 26px; padding: 20px 0px;">
-            Bajada explicativa de esta línea de investigación.
-          </div>
-          <a href="{{ link | prepend: site.baseurl }}"
-            style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px; padding-left: 20px;">
-            Ver más
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
-            </svg>
-          </a>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-    <br>
     <!-- Seccion Noticias -->
-    <div style="background-color:#F4F4F4;">
+    <div>
       <br>
       <div class="content">
         <div style="display: flex; justify-content: space-between;">
@@ -140,6 +70,47 @@
       </div>
       <br>
     </div>
+    <!-- Seccion Áreas de Investigación -->
+    <div class="content" style="background-color:#F4F4F4;">
+      <br>
+      <br>
+      <div class="center-title">
+        Líneas de investigación
+      </div>
+      <br>
+      <br>
+      <br>
+      <!-- Cartas de Areas de investigacion -->
+      {% assign research_links = "/early-childhood /education /health /crime" | split: " " %}
+      {% assign research_titles = "Early Childhood,Education,Health,Crime" | split: "," %}
+
+      <div style="display: flex; gap: 20px;">
+        {% for link in research_links %}
+        {% assign index = forloop.index0 %}
+        {% assign title = research_titles[index] %}
+        <div class="research-area-card">
+          <br>
+          <div style="font-size: 32px; font-weight: 700; line-height: 39.07px; color: #E00F18;">
+            {{ title }}
+          </div>
+          <div style="font-size: 18px; font-weight: 400; line-height: 26px; padding: 20px 0px;">
+            Bajada explicativa de esta línea de investigación.
+          </div>
+          <a href="{{ link | prepend: site.baseurl }}"
+            style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px; padding-left: 20px;">
+            Ver más
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
+            </svg>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      <br>
+      <br>
+      <br>
+    </div>
+
   </main>
 
   {% include footer.html %}

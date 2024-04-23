@@ -42,9 +42,14 @@ breadcrumbs:
           <img src="{{ '/assets/images/persona1.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
         </div>
         <div class="contenedor-texto">
-          <div class="titulo">Nombre</div>
-          <div class="subtitulo">Puesto de Trabajo</div>
-          <div class="biografia">Aquí va un párrafo con una mini biografía o descripción.</div>
+          <div class="titulo">Andrés Barros</div>
+          <div class="subtitulo">Director</div>
+          <div class="biografia">
+            asdqasdasd
+          </div>
+          <a href="https://www.google.cl" target="_blank" style="color: red">
+            Sitio web
+          </a>
         </div>
       </div>
       <div class="four-card">
@@ -82,7 +87,7 @@ breadcrumbs:
     <br>
     <div class="contenedor-inferior">
       <div class="mitad texto">
-        <div class="fila fila1">¿Te interesa ser parte del <span style="color: #E00F18">Human Capital Lab?</span></div>
+        <div class="fila fila1">¿Te interesa ser parte del <span style="color: #E00F18">Human Development Lab?</span></div>
         <div class="fila fila2">
           Escríbenos a través de nuestro formulario de contacto y descubre como puedes aportar en nuestro Centro de Esrtudios
         </div>

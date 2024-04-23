@@ -1,9 +1,9 @@
 # Welcome to Jekyll!
 
-title: Human Capital Lab
+title: Human Development Lab
 email: your-email@example.com
 description: >-
-  Human Capital Lab es un laboratorio de investigación en capital humano y educación.
+  Human Development Lab es un laboratorio de investigación en capital humano y educación.
 baseurl: '/human-lab' # Asegúrate de que haya una barra al principio, pero no al final.
 url: 'https://lucas-vergara.github.io' # La URL debe ser hasta tu usuario de GitHub, sin el repositorio.
 twitter_username: jekyllrb

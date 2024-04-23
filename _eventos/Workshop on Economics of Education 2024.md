@@ -4,7 +4,7 @@ title: 'Workshop on Economics of Education 2024'
 subtitle: 'Taller'
 banner-image: 'evento-valle.jpg'
 schedule-dates: '20-23 de Agosto, 2024'
-schedule-time: 'De 10:00 a 18:00 hrs'
+schedule-time: '-'
 location: 'Cam. Valle Nevado 1333, Santiago, Lo Barnechea, Región Metropolitana'
 categories: eventos
 tipo: taller
