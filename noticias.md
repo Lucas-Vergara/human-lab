@@ -22,18 +22,18 @@ breadcrumbs:
 
 # Noticias más recientes
 
-  <ul class="noticia-list">
+  <ul class="noticias-list">
     {% for noticia in noticias_ordenadas %}
-    <li class="noticia-card{% if forloop.index > 4 %} hidden{% endif %}" style="cursor: pointer">
+    <li class="noticias-card{% if forloop.index > 4 %} hidden{% endif %}">
       {% if noticia.image %}
       <img src="{{ noticia.image | prepend: site.baseurl }}" alt="{{ noticia.title }}"
         class="noticia-img">
       {% endif %}
-      <div style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
-        <div style="font-size: 18px; font-weight: 700; line-height: 26px;">
+      <div class="noticias-card-text-section">
+        <div class="noticias-card-title">
           {{ noticia.title }}
         </div>
-        <a href="{{ noticia.url | prepend: site.baseurl }}" style="color: #E00F18; align-self: flex-end;">
+        <a href="{{ noticia.url | prepend: site.baseurl }}" class="noticias-card-date">
           {% assign mes = noticia.date | date: "%-m" | minus: 1 %}
           {{ noticia.date | date: "%-d de" }} {{ meses[mes] }} de {{ noticia.date | date: "%Y" }}
         </a>

@@ -3,7 +3,7 @@ layout: noticia
 title: 'Inicio de convenio de colaboración entre Universidad de los Andes y Asociación Chilena de Municipalidades'
 date: 2024-03-08
 image: '/assets/images/Frame 18.png'
-images: 'prueba/'
+images: 'valle_nevado/'
 categories: noticias
 breadcrumbs:
   - title: Inicio

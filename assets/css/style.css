@@ -98,22 +98,47 @@ body {
   object-fit: cover;
 }
 
-.four-cards {
+.img-text-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px; /* Espacio entre las cartas */
-  justify-content: space-around; /* Esto distribuye el espacio de manera uniforme */
+  justify-content: center; /* Esto distribuye el espacio de manera uniforme */
 }
 
-.four-card {
-  flex-basis: calc(
-    50% - 80px
-  ); /* Asume un gap de 20px, ajusta según necesites */
+.img-text-card {
+  max-width: 350px; /* Limita el ancho máximo de las cartas */
   background: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px; /* Añadido padding aquí */
+  padding: 15px;
+}
+
+.repositorio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.repositorio-item {
+  background: #f4f4f4;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  max-width: 500px;
+}
+
+.repositorio-item img {
+  max-height: 300px; /* Limita la altura máxima de la imagen */
+  width: auto; /* Mantiene la proporción de la imagen */
+}
+
+.repositorio-item-contenedor-foto {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenedor-foto {
@@ -124,7 +149,7 @@ body {
 }
 
 .contenedor-foto img {
-  max-height: 150px; /* Limita la altura máxima de la imagen */
+  max-height: 200px; /* Limita la altura máxima de la imagen */
   width: auto; /* Mantiene la proporción de la imagen */
 }
 
@@ -136,6 +161,11 @@ body {
   align-items: start; /* Alinea los elementos al inicio, cambia según necesites */
   padding: 10px;
   margin-left: 20px;
+}
+
+.contenedor-texto-titulo {
+  padding: 10px 0;
+  font-weight: 700;
 }
 
 .titulo,
@@ -271,11 +301,6 @@ body {
     margin: 0px; /* Ajusta el margen para el contenido principal */
   }
 
-  .research-area-card,
-  .noticia-card {
-    flex-direction: column;
-  }
-
   .content div,
   .content ul {
     display: block;
@@ -284,11 +309,6 @@ body {
   div[style*='display: flex;'] {
     flex-direction: column;
     gap: 20px;
-  }
-
-  .research-area-card,
-  .noticia-card {
-    width: 100%; /* Ocupa todo el ancho disponible */
   }
 
   .breadcrumbs {

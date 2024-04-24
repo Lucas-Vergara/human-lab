@@ -36,8 +36,8 @@ breadcrumbs:
     </div>
     <br>
     <br>
-    <div class="four-cards">
-      <div class="four-card">
+    <div class="img-text-cards">
+      <div class="img-text-card">
         <div class="contenedor-foto">
           <img src="{{ '/assets/images/persona1.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
         </div>
@@ -45,14 +45,14 @@ breadcrumbs:
           <div class="titulo">Andrés Barros</div>
           <div class="subtitulo">Director</div>
           <div class="biografia">
-            asdqasdasd
+            Biografía
           </div>
           <a href="https://www.google.cl" target="_blank" style="color: red">
             Sitio web
           </a>
         </div>
       </div>
-      <div class="four-card">
+      <div class="img-text-card">
         <div class="contenedor-foto">
           <img src="{{ '/assets/images/persona2.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
         </div>
@@ -62,19 +62,9 @@ breadcrumbs:
           <div class="biografia">Aquí va un párrafo con una mini biografía o descripción.</div>
         </div>
       </div>
-      <div class="four-card">
+      <div class="img-text-card">
         <div class="contenedor-foto">
           <img src="{{ '/assets/images/persona3.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
-        </div>
-        <div class="contenedor-texto">
-          <div class="titulo">Nombre</div>
-          <div class="subtitulo">Puesto de Trabajo</div>
-          <div class="biografia">Aquí va un párrafo con una mini biografía o descripción.</div>
-        </div>
-      </div>
-      <div class="four-card">
-        <div class="contenedor-foto">
-          <img src="{{ '/assets/images/persona1.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
         </div>
         <div class="contenedor-texto">
           <div class="titulo">Nombre</div>

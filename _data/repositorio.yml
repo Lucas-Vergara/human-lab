@@ -1,0 +1,11 @@
+- tipo: 'LIBRO'
+  titulo: 'Talentos en Evolución: Estrategias para Potenciar el Capital Humano en la Era Digital'
+  resumen: 'Este libro explora estrategias efectivas para potenciar el capital humano en la era digital. Proporciona insights valiosos sobre cómo desarrollar y aprovechar los talentos en evolución en un entorno cada vez más tecnológico.'
+  imagen: 'libro1.jpg'
+  archivo: 'boletos.pdf'
+
+- tipo: 'EBOOK'
+  titulo: 'Maximizando el Potencial Humano: Estrategias Innovadoras para el Desarrollo Organizacional'
+  resumen: 'Este libro aborda los aspectos clave del capital humano, desde la contratación y retención de talento hasta el desarrollo de habilidades y la promoción del compromiso de los empleados.'
+  imagen: 'libro2.jpg'
+  archivo: 'boletos.pdf'

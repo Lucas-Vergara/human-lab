@@ -32,7 +32,6 @@ breadcrumbs:
     background-size: 40px 40px; /* Aumenta el tamaño del SVG al doble */
     margin-bottom: 10px; /* Espacio entre elementos de la lista */
 }
-
 </style>
 
 <body>
@@ -89,8 +88,14 @@ breadcrumbs:
     </ul>
   </div>
 </div>
-<div class="four-cards content">
-      <div class="four-card">
+  <br>
+  <br>
+  <div class="center-title">
+    Integrantes
+  </div>
+  <br>
+<div class="img-text-cards content">
+      <div class="img-text-card">
         <div class="contenedor-foto">
           <img src="{{ '/assets/images/persona1.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
         </div>
@@ -100,7 +105,7 @@ breadcrumbs:
           <div class="biografia">Aquí va un párrafo con una mini biografía o descripción.</div>
         </div>
       </div>
-      <div class="four-card">
+      <div class="img-text-card">
         <div class="contenedor-foto">
           <img src="{{ '/assets/images/persona2.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
         </div>
@@ -110,7 +115,7 @@ breadcrumbs:
           <div class="biografia">Aquí va un párrafo con una mini biografía o descripción.</div>
         </div>
       </div>
-      <div class="four-card">
+      <div class="img-text-card">
         <div class="contenedor-foto">
           <img src="{{ '/assets/images/persona3.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
         </div>
@@ -120,15 +125,8 @@ breadcrumbs:
           <div class="biografia">Aquí va un párrafo con una mini biografía o descripción.</div>
         </div>
       </div>
-      <div class="four-card">
-        <div class="contenedor-foto">
-          <img src="{{ '/assets/images/persona1.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
-        </div>
-        <div class="contenedor-texto">
-          <div class="titulo">Nombre</div>
-          <div class="subtitulo">Puesto de Trabajo</div>
-          <div class="biografia">Aquí va un párrafo con una mini biografía o descripción.</div>
-        </div>
-      </div>
     </div>
+    <br>
+    <br>
+    <br>
 </body>

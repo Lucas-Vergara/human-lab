@@ -24,7 +24,7 @@ collections:
 # Incluye directorios y archivos específicos en el sitio compilado.
 # Esto es útil para carpetas como 'pdfs' que quieres que estén disponibles en tu sitio.
 include:
-  - pdfs
+  - repositorio
 
 # Excluir de procesamiento.
 exclude:

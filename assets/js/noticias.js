@@ -4,20 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
   cargarMas.addEventListener("click", function () {
-    const hiddenCards = document.querySelectorAll(".noticia-card.hidden");
+    const hiddenCards = document.querySelectorAll(".noticias-card.hidden");
     for (let i = 0; i < hiddenCards.length && i < 4; i++) {
       hiddenCards[i].classList.remove("hidden");
     }
     // Si no hay más noticias ocultas, oculta el botón "Cargar más noticias"
-    if (document.querySelectorAll(".noticia-card.hidden").length === 0) {
+    if (document.querySelectorAll(".noticias-card.hidden").length === 0) {
       cargarMas.style.display = 'none';
     }
   });
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Seleccionar todos los elementos li con la clase 'noticia-card'
-  const newsCards = document.querySelectorAll('.noticia-card');
+  // Seleccionar todos los elementos li con la clase 'noticias-card'
+  const newsCards = document.querySelectorAll('.noticias-card');
 
   newsCards.forEach(card => {
     card.addEventListener('click', function (event) {

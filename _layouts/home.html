@@ -14,51 +14,44 @@
 <body>
   {% include header.html %}
 
-  <img src="{{ '/assets/images/banner.png' | prepend: site.baseurl }}" alt="Banner Principal" class="img-responsive">
+  <div class="home-banner">
+    <div class="home-banner-text">
+      <div class="home-banner-title">
+        {{ site.title }}
+      </div>
+    </div>
+  </div>
 
   <main class="content-wrapper">
-    <div class="breadcrumbs" style="padding: 20px 0;">
-      {% if page.breadcrumbs %}
-      <ul style="list-style: none; padding: 0;">
-        {% for crumb in page.breadcrumbs %}
-        <li>
-          <a href="{{ crumb.url | prepend: site.baseurl }}">{{ crumb.title }}</a>
-          {% unless forloop.last %} &gt; {% endunless %}
-        </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    </div>
     <!-- Seccion Noticias -->
     <div>
       <br>
       <div class="content">
-        <div style="display: flex; justify-content: space-between;">
-          <div style="font-size: 38px; font-weight: 700; line-height: 46.4px;">
+        <div class="noticias-section-bar">
+          <div class="noticias-section-title">
             Noticias
           </div>
-          <a href="{{ '/noticias' | prepend: site.baseurl }}"
-            style="display: flex; align-items: center; color: #E00F18; font-size: 20px; font-weight: 700; line-height: 24.42px;">
+          <a href="{{ '/noticias' | prepend: site.baseurl }}" class="noticias-ver-mas">
             Ver más noticias
             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
             </svg>
           </a>
         </div>
-        <ul class="noticia-list">
+        <ul class="noticias-list-home">
           {% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" |
           split: "," %}
           {% assign noticias_ordenadas = site.noticias | sort: 'date' | reverse %}
-          {% for noticia in noticias_ordenadas limit:4 %}
-          <li class="noticia-card">
+          {% for noticia in noticias_ordenadas %}
+          <li class="noticias-card">
             {% if noticia.image %}
             <img src="{{ noticia.image | prepend: site.baseurl }}" alt="{{ noticia.title }}" class="noticia-img">
             {% endif %}
-            <div style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; flex: 1;">
-              <div style="font-size: 18px; font-weight: 700; line-height: 26px;">
+            <div class="noticias-card-text-section">
+              <div class="noticias-card-title">
                 {{ noticia.title }}
               </div>
-              <a href="{{ noticia.url | prepend: site.baseurl }}" style="color: #E00F18; align-self: flex-end;">
+              <a href="{{ noticia.url | prepend: site.baseurl }}" class="noticias-card-date">
                 {% assign mes = noticia.date | date: "%-m" | minus: 1 %}
                 {{ noticia.date | date: "%-d de" }} {{ meses[mes] }} de {{ noticia.date | date: "%Y" }}
               </a>
@@ -71,50 +64,54 @@
       <br>
     </div>
     <!-- Seccion Áreas de Investigación -->
-    <div class="content" style="background-color:#F4F4F4;">
-      <br>
-      <br>
-      <div class="center-title">
-        Líneas de investigación
-      </div>
-      <br>
-      <br>
-      <br>
-      <!-- Cartas de Areas de investigacion -->
-      {% assign research_links = "/early-childhood /education /health /crime" | split: " " %}
-      {% assign research_titles = "Early Childhood,Education,Health,Crime" | split: "," %}
-
-      <div style="display: flex; gap: 20px;">
-        {% for link in research_links %}
-        {% assign index = forloop.index0 %}
-        {% assign title = research_titles[index] %}
-        <div class="research-area-card">
-          <br>
-          <div style="font-size: 32px; font-weight: 700; line-height: 39.07px; color: #E00F18;">
-            {{ title }}
-          </div>
-          <div style="font-size: 18px; font-weight: 400; line-height: 26px; padding: 20px 0px;">
-            Bajada explicativa de esta línea de investigación.
-          </div>
-          <a href="{{ link | prepend: site.baseurl }}"
-            style="display: flex; align-items: center; color: #E00F18; font-size: 22px; font-weight: 700; line-height: 26px; padding-left: 20px;">
-            Ver más
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
-            </svg>
-          </a>
+    <div style="background-color:#F4F4F4;">
+      <div class="content">
+        <br>
+        <br>
+        <div class="center-title">
+          Líneas de investigación
         </div>
-        {% endfor %}
+        <br>
+        <br>
+        <br>
+        <!-- Cartas de Areas de investigacion -->
+        {% assign research_links = "/early-childhood /education /health /crime" |
+        split: " "
+        %}
+        {% assign research_titles = "Early Childhood,Education,Health,Crime,Crime" | split: "," %}
+
+        <div class="research-area-card-list">
+          {% for link in research_links %}
+          {% assign index = forloop.index0 %}
+          {% assign title = research_titles[index] %}
+          <div class="research-area-card">
+            <br>
+            <div class="research-area-card-title">
+              {{ title }}
+            </div>
+            <div class="research-area-card-description">
+              Bajada explicativa de esta línea de investigación.
+            </div>
+            <a href="{{ link | prepend: site.baseurl }}" class="ver-mas-link">
+              Ver más
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.6 12.5L8 7.9L9.4 6.5L15.4 12.5L9.4 18.5L8 17.1L12.6 12.5Z" fill="#E00F18" />
+              </svg>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        <br>
+        <br>
+        <br>
       </div>
-      <br>
-      <br>
-      <br>
     </div>
 
   </main>
 
   {% include footer.html %}
   <script src="{{ '/assets/js/script.js' | prepend: site.baseurl }}"></script>
+  <script src="{{ '/assets/js/noticias.js' | prepend: site.baseurl }}"></script>
 </body>
 
 </html>
