@@ -36,3 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var dropdownDivs = document.querySelectorAll('.dropdown-content div');
+  dropdownDivs.forEach(function (div) {
+    div.addEventListener('click', function () {
+      window.location.href = div.getAttribute('data-href'); // Redirige a la URL almacenada en data-href
+    });
+  });
+});

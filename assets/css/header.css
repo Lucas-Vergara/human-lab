@@ -78,17 +78,22 @@
   z-index: 1;
 }
 
-.dropdown-content a {
-  color: black !important;
-  padding: 16px 16px;
-  text-decoration: none;
+.dropdown-content .dropdown-item {
+  color: black;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
 }
 
-.dropdown-content a:hover {
+.dropdown-content .dropdown-item:hover {
   background-color: #f2ddde;
-  color: #e00f18 !important;
+  color: #e00f18;
+}
+
+.dropdown-content .dropdown-item > div:last-child {
+  margin-left: auto; /* Asegura que el '>' se alinea a la derecha */
 }
 
 @media (max-width: 768px) {

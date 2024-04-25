@@ -58,38 +58,22 @@
             <img src="{{'/assets/images/v-down.svg' | prepend: site.baseurl }}" alt="v-down">
           </a>
           <div class="dropdown-content">
-            <a href="{{'/research/early-childhood' | prepend: site.baseurl}}">
-              <div>
-                Early Childhood
-              </div>
-              <div>
-                >
-              </div>
-            </a>
-            <a href="{{'/research/health' | prepend: site.baseurl}}">
-              <div>
-                Health
-              </div>
-              <div>
-                >
-              </div>
-            </a>
-            <a href="{{'/research/education' | prepend: site.baseurl}}">
-              <div>
-                Education
-              </div>
-              <div>
-                >
-              </div>
-            </a>
-            <a href="{{'/research/crime' | prepend: site.baseurl}}">
-              <div>
-                Crime
-              </div>
-              <div>
-                >
-              </div>
-            </a>
+            <div class="dropdown-item" data-href="{{'/research/early-childhood' | prepend: site.baseurl}}">
+              <div>Early Childhood</div>
+              <div>></div>
+            </div>
+            <div class="dropdown-item" data-href="{{'/research/health' | prepend: site.baseurl}}">
+              <div>Health</div>
+              <div>></div>
+            </div>
+            <div class="dropdown-item" data-href="{{'/research/education' | prepend: site.baseurl}}">
+              <div>Education</div>
+              <div>></div>
+            </div>
+            <div class="dropdown-item" data-href="{{'/research/crime' | prepend: site.baseurl}}">
+              <div>Crime</div>
+              <div>></div>
+            </div>
           </div>
         </li>
         <li><a href="{{'/noticias' | prepend: site.baseurl}}">Noticias</a></li>
