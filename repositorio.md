@@ -19,16 +19,22 @@ breadcrumbs:
         <div style="color: red; font-weight: bold">
           {{ item.tipo }}
         </div>
-        <div class="contenedor-texto-titulo">
+        <h3>
           {{ item.titulo }}
-        </div>
+        </h3>
         <div>
           {{ item.resumen }}
         </div>
         <br>
-        <a href="{{'/repositorio/' | append: item.archivo | prepend: site.baseurl }}" download style="color: red">
-          Descargar
-        </a>
+        {% if item.es_externo %}
+          <a href="{{ item.archivo }}" target="_blank" style="color: red">
+            Descargar
+          </a>
+        {% else %}
+          <a href="{{ '/repositorio/' | append: item.archivo | prepend: site.baseurl }}" download style="color: red">
+            Descargar
+          </a>
+        {% endif %}
       </div>
     </div>
   {% endfor %}

@@ -91,7 +91,6 @@ breadcrumbs:
       <span>Ver otros eventos anteriores</span>
     </div>
     {% endif %}
-
   </div>
 </div>
 

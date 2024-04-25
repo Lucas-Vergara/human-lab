@@ -39,15 +39,15 @@ breadcrumbs:
     <div class="img-text-cards">
       <div class="img-text-card">
         <div class="contenedor-foto">
-          <img src="{{ '/assets/images/persona1.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
+          <img src="{{ '/assets/images/andres.jpg' | prepend: site.baseurl }}" alt="persona" class="img-responsive">
         </div>
         <div class="contenedor-texto">
           <div class="titulo">Andrés Barros</div>
           <div class="subtitulo">Director</div>
           <div class="biografia">
-            Biografía
+            Profesor Asistente en la Escuela de Negocios y Economía de la Universidad de Los Andes
           </div>
-          <a href="https://www.google.cl" target="_blank" style="color: red">
+          <a href="https://andresbarriosf.github.io/" target="_blank" style="color: red">
             Sitio web
           </a>
         </div>

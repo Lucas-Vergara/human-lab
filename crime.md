@@ -1,12 +1,12 @@
 ---
 layout: investigacion
-title: Early Childhood
-permalink: /research/early-childhood/
+title: Crime
+permalink: /research/crime/
 breadcrumbs:
   - title: Inicio
     url: '/'
-  - title: Early Childhood
-    url: '/research/early-childhood/'
+  - title: Crime
+    url: '/research/crime'
 ---
 
 <style>
@@ -38,7 +38,7 @@ breadcrumbs:
 <div class="contenedor">
   <div class="column">
     <h1>
-    Enfocado en el desarrollo infantil
+    Violencia en la sociedad actual
     </h1>
     <!-- Párrafo principal -->
     <p>
@@ -62,7 +62,7 @@ breadcrumbs:
     </p>
   </div>
   <div class="column">
-    <img src="{{ '/assets/images/early-childhood.jpg' | prepend: site.baseurl }}" alt="early-childhood" class="img-responsive">
+    <img src="{{ '/assets/images/crime.jpg' | prepend: site.baseurl }}" alt="early-childhood" class="img-responsive">
     <br>
     <br>
     <br>

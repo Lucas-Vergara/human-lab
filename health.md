@@ -1,12 +1,12 @@
 ---
 layout: investigacion
-title: Early Childhood
-permalink: /research/early-childhood/
+title: Health
+permalink: /research/health/
 breadcrumbs:
   - title: Inicio
     url: '/'
-  - title: Early Childhood
-    url: '/research/early-childhood/'
+  - title: Health
+    url: '/research/health/'
 ---
 
 <style>
@@ -38,7 +38,7 @@ breadcrumbs:
 <div class="contenedor">
   <div class="column">
     <h1>
-    Enfocado en el desarrollo infantil
+    Salud y bienestar de las personas
     </h1>
     <!-- Párrafo principal -->
     <p>
@@ -62,7 +62,7 @@ breadcrumbs:
     </p>
   </div>
   <div class="column">
-    <img src="{{ '/assets/images/early-childhood.jpg' | prepend: site.baseurl }}" alt="early-childhood" class="img-responsive">
+    <img src="{{ '/assets/images/health.jpg' | prepend: site.baseurl }}" alt="early-childhood" class="img-responsive">
     <br>
     <br>
     <br>
