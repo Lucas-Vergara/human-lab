@@ -98,6 +98,10 @@ footer {
     font-size: revert; /* Restablece el tamaño de la fuente */
   }
 
+  .events-box {
+    max-width: 400px;
+  }
+
   .columna {
     flex: 1 1 auto; /* Ajusta automáticamente el tamaño */
   }
