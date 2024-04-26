@@ -1,62 +1,65 @@
-/* Footer */
+/* Estilos base para el footer */
 footer {
   display: flex;
-  justify-content: flex-start;
-  gap: 150px;
-  padding-left: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background: #E00F18;
-  color: #FFFFFF;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  justify-content: space-between; /* Distribuye el espacio adecuadamente */
+  gap: 10px; /* Espacio inicial para todos los tamaños */
+  padding: 20px;
+  padding-left: 50px; /* Añade padding adicional a la izquierda */
+  background: #e00f18;
+  color: #ffffff;
 }
 
+/* Estilos para los eventos en el footer */
 .events {
-  padding: 30px 50px 30px 50px;
-  background: #EDEDED;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px; /* Espacio entre elementos */
+  background: #ededed;
+  padding: 30px 50px; /* Padding para todos los tamaños, ajustado en media query para móviles */
+  text-align: left; /* Alineación del texto */
 }
 
 .events-text {
-  font-size: 20px;
   font-weight: 700;
   line-height: 29.3px;
-  text-align: left;
 }
 
 .events-box {
   margin-top: -8px;
-  font-size: 18px;
+  font-size: 18px; /* Tamaño de fuente para pantallas grandes, ajustado en media query para móviles */
   font-weight: 700;
   line-height: 24.42px;
-  text-align: left;
   padding: 10px 20px 6px 20px;
-  background: #FFFFFF;
-  color: #E00F18;
-  border: 2px solid #E00F18
+  max-width: 102px;
+  background: #ffffff;
+  color: #e00f18;
+  border: 2px solid #e00f18;
 }
 
+/* Columnas dentro del footer */
 .columna {
   display: flex;
   flex-direction: column;
+  flex: 1 1 100%; /* Ocupa el 100% del ancho en móviles, ajustado en media query para pantallas grandes */
 }
 
 .columna ul {
-  padding-left: 20px; /* Ajusta el padding para alinear el texto de la lista si es necesario */
+  padding-left: 20px; /* Alinea el texto de la lista, se elimina en móviles */
 }
 
 .columna ul li {
-  list-style-type: disc; /* Estilo de punteo para los ítems de la lista, disc es el valor por defecto */
+  list-style-type: disc;
   margin-bottom: 5px;
 }
 
 .columna ul li a {
   color: #fff;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .columna ul li a:hover {
-  border-bottom: 2px solid #FFFFFF;
+  border-bottom: 2px solid #ffffff;
 }
 
 .columna div {
@@ -64,16 +67,42 @@ footer {
   font-size: 20px;
   font-weight: 700;
   line-height: 29.3px;
-  text-align: left;
 }
 
 .escribenos {
-  border: 2px solid #FFFFFF;
-  color: #FFFFFF;
+  border: 2px solid #ffffff;
+  color: #ffffff;
   padding: 8px 2px 5px 20px;
-  font-size: 15px !important;
+  font-size: 15px;
   font-weight: 700;
   line-height: 24.42px;
   width: 110px;
   margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-wrap: nowrap; /* No envuelve los elementos */
+    gap: 150px; /* Espacio entre elementos */
+  }
+
+  .events {
+    flex-direction: row; /* Restablece la disposición de fila */
+    justify-content: space-between;
+    padding: 30px 50px; /* Restablece el padding */
+  }
+
+  .events-text,
+  .events-box {
+    font-size: 20px !important;
+    font-size: revert; /* Restablece el tamaño de la fuente */
+  }
+
+  .columna {
+    flex: 1 1 auto; /* Ajusta automáticamente el tamaño */
+  }
+
+  .columna ul {
+    padding: 0; /* Elimina el padding para dispositivos grandes */
+  }
 }

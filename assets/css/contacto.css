@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
 .contacto-container {
   display: flex;
   width: 100%;
@@ -10,17 +12,16 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 50%;
   font-size: 50px;
   font-weight: 700;
   color: #000000cd;
   margin: auto;
 }
-.right-column {
-  width: 50%;
-}
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+.left-column,
+.right-column {
+  width: 50%; /* Ancho por defecto para pantallas grandes */
+}
 
 .formcarry-container {
   box-sizing: border-box;
@@ -31,25 +32,17 @@
   font-weight: 400;
   line-height: 24px;
   letter-spacing: -0.01em;
-
   width: 400px;
-
-  /* NORMAL */
   --fc-border-color: #eceff9;
   --fc-normal-text-color: #0e0b3d;
   --fc-normal-placeholder-color: #b3b8d0;
-
-  /* PRIMARY COLOR | HSL FORMAT*/
   --fc-primary-color-hue: 220;
   --fc-error-color-hue: 356;
   --fc-primary-hsl: var(--fc-primary-color-hue), 100%, 54%;
   --fc-error-hsl: var(--fc-error-color-hue), 100%, 54%;
-
-  /* HOVER */
   --fc-field-hover-bg-color: #f7f9fc;
   --fc-border-hover-color: #dde0ee;
   --fc-field-hover-text-color: #b3b8d0;
-
   --fc-border-active-color: #1463ff;
 }
 
@@ -76,7 +69,6 @@
   color: var(--fc-normal-text-color);
   border-radius: 6px;
   padding: 8px 12px;
-
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   transition: 125ms background, 125ms color, 125ms box-shadow;
@@ -116,7 +108,6 @@
 
 .formcarry-container select {
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9997 14.5001L8.46387 10.9642L9.64303 9.78589L11.9997 12.1434L14.3564 9.78589L15.5355 10.9642L11.9997 14.5001Z' fill='%236C6F93'/%3E%3C/svg%3E%0A");
-  /* background-position: calc(100% - 20px) calc(1em + 4px), calc(100% - 15px) calc(1em + 4px); */
   background-size: 24px 24px;
   background-position: 98%;
   background-repeat: no-repeat;
@@ -153,4 +144,28 @@
   color: hsl(var(--fc-error-hsl));
   border-color: hsl(var(--fc-error-hsl));
   box-shadow: 0px 0px 0px 3px hsla(var(--fc-error-hsl), 12%);
+}
+
+/* Agrupar todas las reglas @media al final */
+@media (max-width: 768px) {
+  .contacto-container {
+    flex-direction: column;
+    margin-left: -20px;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .formcarry-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .left-column {
+    font-size: 24px;
+  }
 }

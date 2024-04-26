@@ -15,28 +15,19 @@
 
   <div class="content-wrapper">
     <div class="img">
-      <div class="content" style="padding-top: 25px; margin-top: 0px;">
+      <div class="content">
         <div class="breadcrumbs">
-          <div style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center;">
-
-            {% if page.breadcrumbs %}
-            <img src="{{'/assets/images/home.svg' | prepend: site.baseurl }}" alt="home"
-              style="margin-right: -45px; height: 20px; margin-top: -4px; padding-right: 2px;">
-            <div>
-              <ul>
-                {% for crumb in page.breadcrumbs %}
-                <li style="display: inline-block;">
-                  <a href="{{ crumb.url | prepend: site.baseurl }}"
-                    style="text-decoration: none; color: white; margin-left: 5px;">{{
-                    crumb.title }}</a>
-                  {% unless forloop.last %} / {% endunless %}
-                </li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-            </div>
-          </div>
-
+          {% if page.breadcrumbs %}
+          <img src="{{'/assets/images/home.svg' | prepend: site.baseurl }}" alt="home" class="home-icon">
+          <ul>
+            {% for crumb in page.breadcrumbs %}
+            <li>
+              <a href="{{ crumb.url | prepend: site.baseurl }}">{{ crumb.title }}</a>
+              {% unless forloop.last %} / {% endunless %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </div>
         <div class="banner-title">{{ page.title }}</div>
       </div>

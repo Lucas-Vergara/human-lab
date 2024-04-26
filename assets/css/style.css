@@ -25,6 +25,7 @@ body {
 }
 
 .content-wrapper {
+  overflow-x: hidden;
   flex: 1; /* Esto hará que el contenedor del contenido crezca para ocupar el espacio disponible, empujando el footer hacia abajo */
 }
 
@@ -85,11 +86,6 @@ body {
   min-width: 100%; /* Asegura que la imagen siempre sea al menos tan ancha como el contenedor */
   object-fit: cover;
   object-position: center center; /* Centra el recorte */
-}
-
-.breadcrumbs {
-  margin-top: 0px;
-  color: white;
 }
 
 .noticia-img {
@@ -291,8 +287,60 @@ body {
   left: 0;
 }
 
+.img {
+  background-image: url('../images/image2.png');
+  filter: grayscale(100%);
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center; /* Alinea verticalmente el contenido */
+  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+}
+
+.content {
+  padding-top: 25px;
+  text-align: center; /* Centra el texto */
+}
+
+.breadcrumbs {
+  color: white;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0 10px; /* Agrega padding horizontal */
+}
+
+.breadcrumbs img.home-icon {
+  height: 20px;
+  margin-right: 5px; /* Ajusta según necesidad */
+}
+
+.breadcrumbs ul {
+  padding: 0;
+  margin: 0;
+  display: inline-flex; /* Mantiene los breadcrumbs en línea */
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: white;
+}
+
+.banner-title {
+  color: white;
+  padding-top: 10px; /* Espacio entre breadcrumbs y título */
+}
+
 @media (max-width: 768px) {
-  .breadcrumbs ul,
+  .breadcrumbs {
+    display: none !important;
+  }
   .content {
     padding: 10px;
   }
@@ -311,7 +359,7 @@ body {
     gap: 20px;
   }
 
-  .breadcrumbs {
-    padding: 10px;
+  .img {
+    height: 200px; /* Reduce la altura para dispositivos móviles */
   }
 }
