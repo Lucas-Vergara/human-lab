@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 50px;
+  font-size: 42px;
   font-weight: 700;
   color: #000000cd;
   margin: auto;
@@ -166,6 +166,6 @@
   }
 
   .left-column {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
