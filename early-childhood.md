@@ -9,31 +9,6 @@ breadcrumbs:
     url: '/research/early-childhood/'
 ---
 
-<style>
-  .contenedor {
-    display: flex;
-    width: 100%;
-  }
-  .column {
-    width: 50%;
-    padding: 40px; /* padding de 20px en cada columna */
-    background: #D9D9D94D;
-  }
-  .lista-especial {
-    padding-left: 0; /* Elimina el padding predeterminado de la lista */
-  }
-  .lista-especial li {
-    list-style-type: none !important; /* Elimina el marcador predeterminado */
-    padding-left: 60px; /* Ajusta el padding para acomodar el SVG más grande */
-    background-image: url('{{'/assets/images/check.svg' | prepend: site.baseurl }}'); /* Cambia 'path_to_your_svg.svg' al path de tu SVG */
-    background-repeat: no-repeat;
-    padding-bottom: 20px;
-    background-position: 0 center; /* Ajusta según la alineación deseada del SVG */
-    background-size: 40px 40px; /* Aumenta el tamaño del SVG al doble */
-    margin-bottom: 10px; /* Espacio entre elementos de la lista */
-}
-</style>
-
 <body>
 <div class="contenedor">
   <div class="column">
@@ -42,7 +17,7 @@ breadcrumbs:
     </h1>
     <!-- Párrafo principal -->
     <p>
-    La línea de investigación sobre Early Childhood se centra en comprender y abordar los aspectos fundamentales del desarrollo infantil temprano, reconociendo su impacto crucial en la formación de individuos resilientes y competentes en el futuro. 
+    La iniciativa sobre Early Childhood se centra en comprender y abordar los aspectos fundamentales del desarrollo infantil temprano, reconociendo su impacto crucial en la formación de individuos resilientes y competentes en el futuro. 
     </p>
     <!-- Segundo párrafo -->
     <p>

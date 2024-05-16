@@ -19,12 +19,10 @@ breadcrumbs:
 <div class="contacto-container">
   <div class="left-column">
     <div>
-      ¡Estás interesado/a en
-      el Human Development Lab?
+    Para ponerte en contacto con nosotros, completa el formulario.
     </div>
     <br>
     <div style="color: #e00f18">
-      ¡Contáctanos!
     </div>
   </div>
   <div class="right-column">
@@ -43,8 +41,7 @@ breadcrumbs:
         </div>
         <div class="formcarry-block">
           <label for="fc-generated-1-message">Mensaje</label>
-          <textarea name="message" name="message" id="fc-generated-1-message" placeholder="Ingrese su mensaje..."
-            required></textarea>
+          <textarea name="message" id="fc-generated-1-message" placeholder="Ingrese su mensaje..." required></textarea>
         </div>
         <div class="formcarry-block">
           <button type="submit">Enviar</button>

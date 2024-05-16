@@ -16,7 +16,7 @@
         <div style="
         display: flex; 
         flex-direction: column; 
-        padding-top: 10px;
+        padding-top: 25px;
         padding-left: 20px;
         height: 76px;
         font-size: 25px;
@@ -29,8 +29,6 @@
           </div>
           <div>
             Development
-          </div>
-          <div>
             Lab
           </div>
         </div>
@@ -51,10 +49,11 @@
         </a>
       </div>
       <ul>
+        <li><a href="{{'/' | prepend: site.baseurl}}">Inicio</a></li>
         <li><a href="{{'/nosotros' | prepend: site.baseurl}}">Sobre nosotros</a></li>
         <li class="dropdown">
           <a href="#" class="dropbtn">
-            Líneas de investigación
+            Iniciativas
             <img src="{{'/assets/images/v-down.svg' | prepend: site.baseurl }}" alt="v-down">
           </a>
           <div class="dropdown-content">
@@ -76,9 +75,9 @@
             </div>
           </div>
         </li>
-        <li><a href="{{'/noticias' | prepend: site.baseurl}}">Noticias</a></li>
+        <li><a href="{{'/articulos' | prepend: site.baseurl}}">Artículos</a></li>
         <li><a href="{{'/eventos' | prepend: site.baseurl}}/">Eventos</a></li>
-        <li><a href="{{'/repositorio' | prepend: site.baseurl}}">Repositorio</a></li>
+        <li><a href="{{'/noticias' | prepend: site.baseurl}}">Noticias</a></li>
         <li><a href="{{'/contacto' | prepend: site.baseurl}}">Contacto</a></li>
       </ul>
     </nav>
@@ -95,9 +94,8 @@
       ☰
     </button>
     <ul class="mobile-nav">
+      <li><a href="{{'/' | prepend: site.baseurl}}">Inicio</a></li>
       <li><a href="{{'/nosotros' | prepend: site.baseurl}}">Sobre nosotros</a></li>
-      <li><a href="{{'/noticias' | prepend: site.baseurl}}">Noticias</a></li>
-      <li><a href="{{'/eventos' | prepend: site.baseurl}}/">Eventos</a></li>
       <li>
         <a href="{{'/research/early-childhood' | prepend: site.baseurl}}">Early Childhood</a>
       </li>
@@ -110,8 +108,9 @@
       <li>
         <a href="{{'/research/crime' | prepend: site.baseurl}}">Crime</a>
       </li>
-      </li>
-      <li><a href="{{'/repositorio' | prepend: site.baseurl}}">Repositorio</a></li>
+      <li><a href="{{'/articulos' | prepend: site.baseurl}}">Artículos</a></li>
+      <li><a href="{{'/eventos' | prepend: site.baseurl}}/">Eventos</a></li>
+      <li><a href="{{'/noticias' | prepend: site.baseurl}}">Noticias</a></li>
       <li><a href="{{'/contacto' | prepend: site.baseurl}}">Contacto</a></li>
     </ul>
   </div>

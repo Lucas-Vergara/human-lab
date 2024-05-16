@@ -20,8 +20,6 @@ breadcrumbs:
 {% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
 {% assign noticias_ordenadas = site.noticias | sort: 'date' | reverse %}
 
-# Noticias más recientes
-
   <ul class="noticias-list">
     {% for noticia in noticias_ordenadas %}
     <li class="noticias-card{% if forloop.index > 4 %} hidden{% endif %}">

@@ -1,16 +1,16 @@
 ---
 layout: page
-title: Repositorio
-permalink: /repositorio/
+title: Artículos
+permalink: /articulos/
 breadcrumbs:
   - title: Inicio
     url: '/'
-  - title: Repositorio
-    url: '/repositorio/'
+  - title: Artículos
+    url: '/articulos/'
 ---
 
 <div class="repositorio-list">
-  {% for item in site.data.repositorio %}
+  {% for item in site.data.articulos %}
     <div class="repositorio-item">
       <div class="repositorio-item-contenedor-foto">
         <img src="{{ '/assets/images/' | append: item.imagen | prepend: site.baseurl }}" alt="imagen representativa" class="img-responsive">
@@ -31,7 +31,7 @@ breadcrumbs:
             Descargar
           </a>
         {% else %}
-          <a href="{{ '/repositorio/' | append: item.archivo | prepend: site.baseurl }}" download style="color: red">
+          <a href="{{ '/articulos/' | append: item.archivo | prepend: site.baseurl }}" download style="color: red">
             Descargar
           </a>
         {% endif %}

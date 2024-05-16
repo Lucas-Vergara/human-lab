@@ -79,7 +79,7 @@ breadcrumbs:
       <div class="mitad texto">
         <div class="fila fila1">¿Te interesa ser parte del <span style="color: #E00F18">Human Development Lab?</span></div>
         <div class="fila fila2">
-          Escríbenos a través de nuestro formulario de contacto y descubre como puedes aportar en nuestro Centro de Esrtudios
+        Para ponerte en contacto con nosotros, completa el formulario que encontrarás en el siguiente link.
         </div>
         <div class="fila boton">
           <a href="{{'/contacto' | prepend: site.baseurl}}">

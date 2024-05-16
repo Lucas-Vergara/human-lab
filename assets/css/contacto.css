@@ -53,6 +53,7 @@
 .formcarry-container label {
   display: block;
   cursor: pointer;
+  text-align: left; /* Alinea las etiquetas a la izquierda */
 }
 
 .formcarry-container .formcarry-block:not(:first-child) {
